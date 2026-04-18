@@ -1,0 +1,24 @@
+/* ===== INDEX ===== */
+
+.profile-summary {
+  position: relative;
+}
+
+.projects-preview {
+  position: relative;
+}
+
+.tech-section {
+  position: relative;
+}
+
+.contact-section {
+  position: relative;
+}
+
+/* Aquí luego pondremos estilos exclusivos de:
+   - about.html
+   - areas.html
+   - analista.html
+   - proyectos.html
+*/
