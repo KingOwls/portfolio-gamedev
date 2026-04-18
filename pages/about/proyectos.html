@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Proyectos | Portafolio</title>
+  <meta name="description" content="Catálogo de proyectos de videojuegos, prototipos y desarrollos del portafolio." />
+  <link rel="icon" type="image/gif" href="../../assets/img/icons/bird_anim_01.gif" />
+  <link rel="stylesheet" href="../../assets/css/main.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="../../index.html" class="logo">JCrow</a>
+
+      <nav class="nav-menu" id="navMenu">
+        <a href="../../index.html">Inicio</a>
+        <a href="../about/about.html">Sobre mí</a>
+        <a href="../areas/areas.html">Proyectos / Áreas</a>
+        <a href="../analista/analista.html">Análisis de juegos</a>
+        <a href="../../assets/pdf/Hoja_de_vida.pdf" target="_blank">Hoja de vida</a>
+      </nav>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">☰</button>
+    </div>
+  </header>
+
+  <main class="projects-page">
+    <section class="projects-hero">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-tag">Proyectos</p>
+          <h1>Catálogo interactivo</h1>
+          <p class="projects-hero-text">
+            Explora videojuegos, conceptos, prototipos y trabajos del portafolio. 
+            Puedes verlos en movimiento como un catálogo visual o cambiar a vista por tarjetas.
+          </p>
+        </div>
+
+        <div class="projects-toolbar">
+          <div class="projects-view-toggle" role="group" aria-label="Cambiar vista">
+            <button id="catalogViewBtn" class="projects-toggle-btn active" type="button">Catálogo</button>
+            <button id="gridViewBtn" class="projects-toggle-btn" type="button">Tarjetas</button>
+          </div>
+
+          <p class="projects-help">
+            Hover pausa la rueda y muestra preview. Doble click abre el proyecto.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects-showcase-section">
+      <div class="container">
+        <div id="projectsCatalogView" class="projects-catalog-view active">
+          <div class="projects-wheel-shell">
+            <button id="projectsPrevBtn" class="projects-nav-btn" type="button" aria-label="Proyecto anterior">←</button>
+
+            <div id="projectsWheel" class="projects-wheel" aria-live="polite"></div>
+
+            <button id="projectsNextBtn" class="projects-nav-btn" type="button" aria-label="Siguiente proyecto">→</button>
+          </div>
+
+          <div id="projectsFocusInfo" class="projects-focus-info">
+            <p class="projects-focus-tag" id="projectsFocusTag">Proyecto</p>
+            <h2 id="projectsFocusTitle">Cargando proyecto...</h2>
+            <p id="projectsFocusDescription">
+              Preparando catálogo visual de proyectos.
+            </p>
+            <a id="projectsFocusLink" href="#" class="btn btn-primary">Abrir proyecto</a>
+          </div>
+        </div>
+
+        <div id="projectsGridView" class="projects-grid-view">
+          <div id="projectsGrid" class="projects-grid"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>© 2026 - Portafolio profesional</p>
+      <p>Diseño, desarrollo y análisis de videojuegos</p>
+    </div>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/projects.js"></script>
+</body>
+</html>
