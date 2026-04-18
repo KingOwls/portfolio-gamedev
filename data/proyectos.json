@@ -1,1 +1,47 @@
-[]
+[
+  {
+    "id": 1,
+    "title": "Symphony of Justice",
+    "category": "Diseño de Videojuegos (Gacha)",
+    "synopsis": "Un proyecto que plantea que la justicia no es única, sino que se divide en cuatro ramas fundamentales: Juicio, Clemencia, Venganza y Sabiduría, dentro de un mundo de fantasía y exploración a través de 13 naciones.",
+    "image": "./assets/img/projects/diseno/SymphonyJustice.png",
+    "buttonText": "Investigación Symphonia Iustitiae",
+    "link": "#"
+  },
+  {
+    "id": 2,
+    "title": "Arcane Island",
+    "category": "Diseño de Videojuegos (MMO)",
+    "synopsis": "Si toda historia tiene un pasado, pero puedes recordar lo ocurrido sin saber cómo llegaste, ¿qué tan real fue ese camino? Desde aquí inicia un mundo que termina sin haber empezado, o quizá empezó desde su propio final.",
+    "image": "./assets/img/projects/diseno/ArcaneIsland.jpeg",
+    "buttonText": "Investigación Arcane Island",
+    "link": "#"
+  },
+  {
+    "id": 3,
+    "title": "Semillero de Investigacion",
+    "category": "Investigacion",
+    "synopsis": "Un proyecto de estudiantes para estudiantes, donde puedan encontrar y profundizar sobre la industria de los videojuegos donde aveces se desea iniciar pero no se tiene ni se sabe como hacer esto",
+    "image": "./assets/img/projects/analisis/Semillero.png",
+    "buttonText": "Actividades Semillero de Videojuegos",
+    "link": "#"
+  },
+  {
+    "id": 4,
+    "title": "Proyectos Web",
+    "category": "Desarrollo de Videojuegos",
+    "synopsis": "Pequeños proyectos e Juegos en Linea, se Buscaba entender y aplicar las mecanicas basicas de Juegos simples con proyeccion a incluirlos todos en un solo Lugar",
+    "image": "./assets/img/projects/desarrollo/Juegos_Web.png",
+    "buttonText": "Juegos en Linea",
+    "link": "#"
+  },
+  {
+    "id": 5,
+    "title": "La isla sin Reino",
+    "category": "Desarrollo de Videojuegos",
+    "synopsis": "Un bot de discord el cual Intentaba recrear los entornos basicos de un MMORPG por tunros, Un proyecto prototipo de Mecanicas con posibilidad de escalarlo a un juego completo",
+    "image": "./assets/img/projects/desarrollo/BotDiscord.png",
+    "buttonText": "Proyecto Discord",
+    "link": "#"
+  }
+]
