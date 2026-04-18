@@ -1,13 +1,212 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio GameDev</title>
-    <link rel="stylesheet" href="assets/css/main.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portafolio | Inicio</title>
+  <meta name="description" content="Portafolio profesional enfocado en diseño, desarrollo y análisis de videojuegos." />
+ <link rel="icon" type="image/gif" href="./assets/img/icons/bird_anim_01.gif" />
+<link rel="stylesheet" href="./assets/css/main.css" />
 </head>
 <body>
-    <h1>Portfolio GameDev</h1>
-    <p>Pagina principal del portafolio.</p>
+
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="./index.html" class="logo">KingOwls</a>
+
+      <nav class="nav-menu" id="navMenu">
+        <a href="./index.html">Inicio</a>
+        <a href="./pages/about/about.html">Sobre mí</a>
+        <a href="./pages/areas/areas.html">Proyectos / Áreas</a>
+        <a href="./pages/analista/analista.html">Análisis de juegos</a>
+        <a href="./assets/pdf/Hoja_de_vida.pdf" target="_blank">Hoja de vida</a>
+      </nav>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero hero-elegant">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <p class="eyebrow">Portafolio profesional</p>
+          <h1>Diseño, desarrollo y visión analítica aplicada a videojuegos</h1>
+          <p class="hero-description">
+            Espacio orientado a la construcción de experiencias interactivas, prototipos jugables,
+            diseño de sistemas y exploración técnica de proyectos vinculados al desarrollo de videojuegos.
+          </p>
+
+          <div class="hero-actions">
+            <a href="./pages/proyectos/proyectos.html" class="btn btn-primary">Explorar proyectos</a>
+            <a href="./assets/pdf/Hoja_de_vida.pdf" target="_blank" class="btn btn-secondary">Ver hoja de vida</a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-media-frame">
+            <img src="./assets/img/hero/hero-main.jpg" alt="Presentación visual principal del portafolio" />
+            <!-- Si luego quieres usar gif, puedes reemplazar la imagen por:
+            <img src="./assets/img/hero/hero-motion.gif" alt="Animación del portafolio" />
+            -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="profile-summary">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-tag">Perfil</p>
+          <h2>Resumen profesional</h2>
+        </div>
+
+        <div class="card-grid">
+          <article class="card feature-card">
+            <h3>Diseño de videojuegos</h3>
+            <p>
+              Desarrollo conceptual de mecánicas, estructuras jugables, propuestas visuales,
+              documentación de ideas, wireframes y organización de experiencias interactivas.
+            </p>
+          </article>
+
+          <article class="card feature-card">
+            <h3>Desarrollo de videojuegos</h3>
+            <p>
+              Trabajo en prototipos y proyectos enfocados en implementación funcional,
+              lógica de sistemas, interfaces y pruebas de interacción.
+            </p>
+          </article>
+
+          <article class="card feature-card">
+            <h3>Prototipos y herramientas</h3>
+            <p>
+              Exploración de proyectos en entornos como Bot de Discord, RPG Maker MV,
+              Unity y otras herramientas orientadas a experiencias jugables y sistemas interactivos.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects-preview">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-tag">Proyectos</p>
+          <h2>Áreas principales del portafolio</h2>
+        </div>
+
+        <div class="card-grid">
+          <article class="card project-card">
+            <h3>Minijuegos publicados en Itch.io</h3>
+            <p>
+              Espacio destinado a mostrar proyectos publicados, pruebas jugables y experiencias
+              accesibles desde la plataforma Itch.io.
+            </p>
+            <a href="https://jcrowleth.itch.io" target="_blank" class="card-link">Ver perfil en Itch.io</a>
+          </article>
+
+          <article class="card project-card">
+            <h3>Juegos ejecutables</h3>
+            <p>
+              Sección pensada para recopilar proyectos empaquetados, prototipos descargables
+              y ejercicios funcionales orientados a interacción directa.
+            </p>
+            <a href="./pages/proyectos/proyectos.html" class="card-link">Explorar sección</a>
+          </article>
+
+          <article class="card project-card">
+            <h3>Juegos de diseño</h3>
+            <p>
+              Propuestas centradas en estructura, concepto, documentación, sistemas,
+              ideas de gameplay y construcción teórica de proyectos.
+            </p>
+            <a href="./pages/areas/areas.html" class="card-link">Explorar sección</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="tech-section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-tag">Tecnologías</p>
+          <h2>Herramientas y entornos de trabajo</h2>
+        </div>
+
+        <div class="tech-grid">
+          <div class="tech-item" tabindex="0">
+            <img src="./assets/img/tech/unity.png" alt="Unity" />
+            <span class="tech-tooltip">Unity: desarrollo de prototipos y juegos interactivos.</span>
+          </div>
+
+          <div class="tech-item" tabindex="0">
+            <img src="./assets/img/tech/rpgmaker.png" alt="RPG Maker MV" />
+            <span class="tech-tooltip">RPG Maker MV: creación de juegos y prototipos RPG.</span>
+          </div>
+
+          <div class="tech-item" tabindex="0">
+            <img src="./assets/img/tech/discord.png" alt="Discord Bot" />
+            <span class="tech-tooltip">Discord Bots: sistemas interactivos y automatización.</span>
+          </div>
+
+          <div class="tech-item" tabindex="0">
+            <img src="./assets/img/tech/html.png" alt="HTML" />
+            <span class="tech-tooltip">HTML: estructura base para experiencias web.</span>
+          </div>
+
+          <div class="tech-item" tabindex="0">
+            <img src="./assets/img/tech/css.png" alt="CSS" />
+            <span class="tech-tooltip">CSS: diseño visual, composición y presentación.</span>
+          </div>
+
+          <div class="tech-item" tabindex="0">
+            <img src="./assets/img/tech/javascript.png" alt="JavaScript" />
+            <span class="tech-tooltip">JavaScript: lógica, interacción y comportamiento dinámico.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-tag">Contacto</p>
+          <h2>Canales profesionales</h2>
+        </div>
+
+        <div class="contact-grid">
+          <a class="contact-card" href="mailto:kingshadowowls@gmail.com">
+            <h3>Email</h3>
+            <p>Enviar correo</p>
+          </a>
+
+          <a class="contact-card" href="https://jcrowleth.itch.io" target="_blank">
+            <h3>Itch.io</h3>
+            <p>Ver perfil de proyectos</p>
+          </a>
+
+          <a class="contact-card" href="https://www.linkedin.com/in/jorge-luis-osorio-808823318/" target="_blank">
+            <h3>LinkedIn</h3>
+            <p>Ver perfil profesional</p>
+          </a>
+
+          <a class="contact-card" href="https://github.com/KingOwls" target="_blank">
+            <h3>GitHub</h3>
+            <p>Ver repositorios</p>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>© 2026 - Portafolio profesional</p>
+      <p>Diseño, desarrollo y análisis de videojuegos</p>
+    </div>
+  </footer>
+
+  <script src="./assets/js/main.js"></script>
 </body>
 </html>
