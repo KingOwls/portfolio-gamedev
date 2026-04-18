@@ -12,7 +12,7 @@
 
   <header class="site-header">
     <div class="container nav-container">
-      <a href="./index.html" class="logo">KingOwls</a>
+      <a href="./index.html" class="logo">JCrow</a>
 
       <nav class="nav-menu" id="navMenu">
         <a href="./index.html">Inicio</a>
@@ -31,7 +31,7 @@
       <div class="container hero-grid">
         <div class="hero-text">
           <p class="eyebrow">Portafolio profesional</p>
-          <h1>Diseño, desarrollo y visión analítica aplicada a videojuegos</h1>
+          <h1>Diseñador, desarrollo y analísta de videojuegos</h1>
           <p class="hero-description">
             Espacio orientado a la construcción de experiencias interactivas, prototipos jugables,
             diseño de sistemas y exploración técnica de proyectos vinculados al desarrollo de videojuegos.
@@ -44,11 +44,50 @@
         </div>
 
         <div class="hero-visual">
-          <div class="hero-media-frame">
-            <img src="./assets/img/hero/hero-main.jpg" alt="Presentación visual principal del portafolio" />
-            <!-- Si luego quieres usar gif, puedes reemplazar la imagen por:
-            <img src="./assets/img/hero/hero-motion.gif" alt="Animación del portafolio" />
-            -->
+          <div class="hero-media-frame project-showcase">
+            <div class="project-showcase-image">
+              <img
+                id="featuredProjectImage"
+                src="./assets/img/projects/diseno/SymphonyJustice.png"
+                alt="Proyecto destacado del portafolio"
+              />
+            </div>
+
+            <div class="project-showcase-content">
+              <p class="project-category" id="featuredProjectCategory">
+                Diseño de Videojuegos
+              </p>
+
+              <h3 class="project-title" id="featuredProjectTitle">
+                Proyecto destacado
+              </h3>
+
+              <p class="project-synopsis" id="featuredProjectSynopsis">
+                Aquí aparecerá la sinopsis corta del proyecto seleccionado.
+              </p>
+
+              <div class="project-showcase-actions">
+                <button class="project-nav-btn" id="prevProjectBtn" type="button" aria-label="Proyecto anterior">
+                  ←
+                </button>
+
+                <button class="project-nav-btn" id="nextProjectBtn" type="button" aria-label="Siguiente proyecto">
+                  →
+                </button>
+
+                <a
+                  id="featuredProjectLink"
+                  href="#"
+                  class="btn btn-primary"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Ver proyecto
+                </a>
+              </div>
+
+              <div class="project-dots" id="projectDots"></div>
+            </div>
           </div>
         </div>
       </div>
@@ -61,29 +100,61 @@
           <h2>Resumen profesional</h2>
         </div>
 
-        <div class="card-grid">
-          <article class="card feature-card">
+        <div class="card-grid profile-card-grid">
+          <article class="card profile-feature-card">
+            <div class="profile-feature-media">
+              <img src="./assets/img/profile/Diseno.png" alt="Diseño de videojuegos" />
+            </div>
             <h3>Diseño de videojuegos</h3>
             <p>
-              Desarrollo conceptual de mecánicas, estructuras jugables, propuestas visuales,
-              documentación de ideas, wireframes y organización de experiencias interactivas.
+              Construcción conceptual de experiencias jugables, mecánicas, narrativa,
+              propuestas visuales y documentación de ideas para proyectos interactivos.
             </p>
+            <button class="btn btn-secondary open-profile-modal-btn" data-modal="modal-diseno">
+              Ver más
+            </button>
           </article>
 
-          <article class="card feature-card">
+          <article class="card profile-feature-card">
+            <div class="profile-feature-media">
+              <img src="./assets/img/profile/Desarrollo.png" alt="Desarrollo de videojuegos" />
+            </div>
             <h3>Desarrollo de videojuegos</h3>
             <p>
-              Trabajo en prototipos y proyectos enfocados en implementación funcional,
-              lógica de sistemas, interfaces y pruebas de interacción.
+              Implementación funcional de prototipos y sistemas interactivos mediante lógica,
+              interfaces, comportamiento técnico y pruebas de interacción.
             </p>
+            <button class="btn btn-secondary open-profile-modal-btn" data-modal="modal-desarrollo">
+              Ver más
+            </button>
           </article>
 
-          <article class="card feature-card">
+          <article class="card profile-feature-card">
+            <div class="profile-feature-media">
+              <img src="./assets/img/profile/Prototipo.png" alt="Prototipos y herramientas" />
+            </div>
             <h3>Prototipos y herramientas</h3>
             <p>
-              Exploración de proyectos en entornos como Bot de Discord, RPG Maker MV,
-              Unity y otras herramientas orientadas a experiencias jugables y sistemas interactivos.
+              Exploración de Unity, RPG Maker MV, bots de Discord y otros entornos
+              para experimentar con jugabilidad, sistemas y estructuras interactivas.
             </p>
+            <button class="btn btn-secondary open-profile-modal-btn" data-modal="modal-prototipos">
+              Ver más
+            </button>
+          </article>
+
+          <article class="card profile-feature-card">
+            <div class="profile-feature-media">
+              <img src="./assets/img/profile/Analista.png" alt="Analista de videojuegos" />
+            </div>
+            <h3>Analista de videojuegos</h3>
+            <p>
+              Estudio del videojuego como sistema, desde su origen y propósito hasta
+              su diseño, entorno, publicación y experiencia para el jugador.
+            </p>
+            <button class="btn btn-secondary open-profile-modal-btn" data-modal="modal-analista">
+              Ver más
+            </button>
           </article>
         </div>
       </div>
@@ -128,45 +199,75 @@
     </section>
 
     <section class="tech-section">
-      <div class="container">
-        <div class="section-heading">
-          <p class="section-tag">Tecnologías</p>
-          <h2>Herramientas y entornos de trabajo</h2>
-        </div>
+  <div class="container">
+    <div class="section-heading">
+      <p class="section-tag">Tecnologías</p>
+      <h2>Herramientas y entornos de trabajo</h2>
+    </div>
 
-        <div class="tech-grid">
-          <div class="tech-item" tabindex="0">
-            <img src="./assets/img/tech/unity.png" alt="Unity" />
-            <span class="tech-tooltip">Unity: desarrollo de prototipos y juegos interactivos.</span>
-          </div>
-
-          <div class="tech-item" tabindex="0">
-            <img src="./assets/img/tech/rpgmaker.png" alt="RPG Maker MV" />
-            <span class="tech-tooltip">RPG Maker MV: creación de juegos y prototipos RPG.</span>
-          </div>
-
-          <div class="tech-item" tabindex="0">
-            <img src="./assets/img/tech/discord.png" alt="Discord Bot" />
-            <span class="tech-tooltip">Discord Bots: sistemas interactivos y automatización.</span>
-          </div>
-
-          <div class="tech-item" tabindex="0">
-            <img src="./assets/img/tech/html.png" alt="HTML" />
-            <span class="tech-tooltip">HTML: estructura base para experiencias web.</span>
-          </div>
-
-          <div class="tech-item" tabindex="0">
-            <img src="./assets/img/tech/css.png" alt="CSS" />
-            <span class="tech-tooltip">CSS: diseño visual, composición y presentación.</span>
-          </div>
-
-          <div class="tech-item" tabindex="0">
-            <img src="./assets/img/tech/javascript.png" alt="JavaScript" />
-            <span class="tech-tooltip">JavaScript: lógica, interacción y comportamiento dinámico.</span>
-          </div>
-        </div>
+    <div class="tech-grid">
+      <div class="tech-item" tabindex="0">
+        <img src="./assets/img/icons/Unity.png" alt="Unity" />
+        <span class="tech-tooltip">Unity: motor de desarrollo para prototipos, sistemas interactivos y videojuegos.</span>
       </div>
-    </section>
+
+      <div class="tech-item" tabindex="0">
+        <img src="./assets/img/icons/RPGMakerMV.png" alt="RPG Maker MV" />
+        <span class="tech-tooltip">RPG Maker MV: creación de videojuegos RPG, prototipos narrativos y sistemas por eventos.</span>
+      </div>
+
+      <div class="tech-item" tabindex="0">
+        <img src="./assets/img/icons/DiscDev.png" alt="Discord Developer" />
+        <span class="tech-tooltip">Discord Developer: desarrollo de bots, automatización y sistemas interactivos para comunidades.</span>
+      </div>
+
+      <div class="tech-item" tabindex="0">
+        <img src="./assets/img/icons/python.png" alt="Python" />
+        <span class="tech-tooltip">Python: scripting, automatización, lógica de sistemas y desarrollo de herramientas.</span>
+      </div>
+
+      <div class="tech-item" tabindex="0">
+        <img src="./assets/img/icons/Java.png" alt="Java" />
+        <span class="tech-tooltip">Java: desarrollo orientado a objetos, lógica de programación y construcción de aplicaciones.</span>
+      </div>
+
+      <div class="tech-item" tabindex="0">
+        <img src="./assets/img/icons/Cpp.png" alt="C++" />
+        <span class="tech-tooltip">C++: bases de programación de alto rendimiento, estructuras y lógica para sistemas complejos.</span>
+      </div>
+
+      <div class="tech-item" tabindex="0">
+        <img src="./assets/img/icons/Ch.png" alt="C#" />
+        <span class="tech-tooltip">C#: lenguaje clave para desarrollo en Unity y construcción de sistemas jugables.</span>
+      </div>
+
+      <div class="tech-item" tabindex="0">
+        <img src="./assets/img/icons/NET.png" alt=".NET" />
+        <span class="tech-tooltip">.NET: entorno de desarrollo para aplicaciones, servicios y soluciones basadas en C#.</span>
+      </div>
+
+      <div class="tech-item" tabindex="0">
+        <img src="./assets/img/icons/Docker.png" alt="Docker" />
+        <span class="tech-tooltip">Docker: contenedores para despliegue, pruebas, entornos reproducibles y servicios.</span>
+      </div>
+
+      <div class="tech-item" tabindex="0">
+        <img src="./assets/img/icons/SonarQube.png" alt="SonarQube" />
+        <span class="tech-tooltip">SonarQube: análisis de calidad de código, revisión técnica y apoyo en buenas prácticas.</span>
+      </div>
+
+      <div class="tech-item" tabindex="0">
+        <img src="./assets/img/icons/Trello.png" alt="Trello" />
+        <span class="tech-tooltip">Trello: organización de tareas, seguimiento de avance y gestión visual de proyectos.</span>
+      </div>
+
+      <div class="tech-item" tabindex="0">
+        <img src="./assets/img/icons/Notion.png" alt="Notion" />
+        <span class="tech-tooltip">Notion: documentación, organización de ideas, estructura de proyectos y planeación.</span>
+      </div>
+    </div>
+  </div>
+</section>
 
     <section class="contact-section">
       <div class="container">
@@ -199,6 +300,70 @@
       </div>
     </section>
   </main>
+
+<div class="profile-modal" id="modal-diseno">
+  <div class="profile-modal-content">
+    <button class="profile-modal-close" type="button">&times;</button>
+    <h3>Diseño de videojuegos</h3>
+    <p>
+      Esta área reúne la construcción conceptual de videojuegos desde la idea inicial:
+      mecánicas, progresión, narrativa, estructura, visión estética y documentación.
+      Aquí se desarrollan propuestas como Symphony of Justice o Arcane Island, donde el
+      diseño busca definir identidad, experiencia y sentido del mundo jugable.
+    </p>
+    <div class="profile-modal-carousel">
+      <img src="./assets/img/profile/Diseno.png" alt="Diseño de videojuegos" />
+    </div>
+  </div>
+</div>
+
+<div class="profile-modal" id="modal-desarrollo">
+  <div class="profile-modal-content">
+    <button class="profile-modal-close" type="button">&times;</button>
+    <h3>Desarrollo de videojuegos</h3>
+    <p>
+      Esta sección representa la parte técnica y funcional de los proyectos:
+      implementación de sistemas, lógica interactiva, estructuras jugables, interfaces
+      y prototipos. Aquí se reflejan ejercicios y experiencias vinculadas a desarrollo
+      web, herramientas interactivas y construcción funcional de propuestas.
+    </p>
+    <div class="profile-modal-carousel">
+      <img src="./assets/img/profile/Desarrollo.png" alt="Desarrollo de videojuegos" />
+    </div>
+  </div>
+</div>
+
+<div class="profile-modal" id="modal-prototipos">
+  <div class="profile-modal-content">
+    <button class="profile-modal-close" type="button">&times;</button>
+    <h3>Prototipos y herramientas</h3>
+    <p>
+      Esta línea se enfoca en la experimentación práctica mediante herramientas como
+      Unity, RPG Maker MV y bots de Discord. Aquí se exploran ideas jugables, pruebas
+      de interacción, estructuras de sistemas y prototipos rápidos orientados a validar
+      conceptos y experiencia.
+    </p>
+    <div class="profile-modal-carousel">
+      <img src="./assets/img/profile/Prototipo.png" alt="Prototipos y herramientas" />
+    </div>
+  </div>
+</div>
+
+<div class="profile-modal" id="modal-analista">
+  <div class="profile-modal-content">
+    <button class="profile-modal-close" type="button">&times;</button>
+    <h3>Analista de videojuegos</h3>
+    <p>
+      El análisis de videojuegos busca comprender cómo funciona una obra interactiva:
+      su diseño, su propósito, la manera en que guía al jugador, sus sistemas internos,
+      su contexto de creación, su publicación y el recorrido completo de su experiencia.
+      Esta mirada permite evaluar videojuegos desde su estructura, intención y ejecución.
+    </p>
+    <div class="profile-modal-carousel">
+      <img src="./assets/img/profile/Analista.png" alt="Analista de videojuegos" />
+    </div>
+  </div>
+</div>
 
   <footer class="site-footer">
     <div class="container footer-content">
