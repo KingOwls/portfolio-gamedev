@@ -13,13 +13,34 @@
   const focusDescription = document.getElementById("projectsFocusDescription");
   const focusLink = document.getElementById("projectsFocusLink");
 
-  if (!catalogView || !gridView || !wheel || !grid) return;
+  if (
+    !catalogView ||
+    !gridView ||
+    !catalogBtn ||
+    !gridBtn ||
+    !wheel ||
+    !grid ||
+    !prevBtn ||
+    !nextBtn ||
+    !focusTag ||
+    !focusTitle ||
+    !focusDescription ||
+    !focusLink
+  ) {
+    console.warn("No se encontraron todos los elementos necesarios del catálogo.");
+    return;
+  }
 
   let projects = [];
   let activeIndex = 0;
   let autoRotate = null;
   let isPaused = false;
   let lastClickTime = 0;
+
+  function normalizePath(path) {
+    if (!path || typeof path !== "string") return "";
+    return path.replace(/\.\.\.\/\.\.\//g, "../../");
+  }
 
   function setView(view) {
     const isCatalog = view === "catalog";
@@ -31,10 +52,12 @@
   }
 
   function updateFocus(project) {
+    if (!project) return;
+
     focusTag.textContent = project.category || "Proyecto";
     focusTitle.textContent = project.title || "Proyecto";
     focusDescription.textContent = project.description || "";
-    focusLink.textContent = `Abrir ${project.title}`;
+    focusLink.textContent = `Abrir ${project.title || "proyecto"}`;
     focusLink.href = project.link || "#";
   }
 
@@ -42,43 +65,66 @@
     const wrapper = document.createElement("div");
     wrapper.className = className;
 
-    const isVideo = project.previewType === "video";
-
     const image = document.createElement("img");
-    image.src = project.cover;
-    image.alt = project.title;
+    image.src = normalizePath(project.cover);
+    image.alt = project.title || "Proyecto";
+    image.loading = "lazy";
 
-    if (!isVideo) {
+    const previewType = (project.previewType || "").toLowerCase();
+    const previewPath = normalizePath(project.preview);
+
+    if (!previewPath || (previewType !== "video" && previewType !== "gif")) {
       wrapper.appendChild(image);
-      return { wrapper, image, video: null };
+      return { wrapper, image, preview: null, type: null };
     }
 
-    const video = document.createElement("video");
-    video.src = project.preview;
-    video.muted = true;
-    video.loop = true;
-    video.playsInline = true;
-    video.preload = "metadata";
-    video.classList.add("projects-preview-hidden");
+    if (previewType === "video") {
+      const video = document.createElement("video");
+      video.src = previewPath;
+      video.muted = true;
+      video.loop = true;
+      video.playsInline = true;
+      video.preload = "metadata";
+      video.classList.add("projects-preview-hidden");
+
+      wrapper.appendChild(image);
+      wrapper.appendChild(video);
+
+      return { wrapper, image, preview: video, type: "video" };
+    }
+
+    const gif = document.createElement("img");
+    gif.src = previewPath;
+    gif.alt = `${project.title || "Proyecto"} preview`;
+    gif.loading = "lazy";
+    gif.classList.add("projects-preview-hidden");
 
     wrapper.appendChild(image);
-    wrapper.appendChild(video);
+    wrapper.appendChild(gif);
 
-    return { wrapper, image, video };
+    return { wrapper, image, preview: gif, type: "gif" };
   }
 
   function playPreview(media) {
-    if (!media.video) return;
+    if (!media || !media.preview) return;
+
     media.image.classList.add("projects-preview-hidden");
-    media.video.classList.remove("projects-preview-hidden");
-    media.video.play().catch(() => {});
+    media.preview.classList.remove("projects-preview-hidden");
+
+    if (media.type === "video") {
+      media.preview.play().catch(() => {});
+    }
   }
 
   function stopPreview(media) {
-    if (!media.video) return;
-    media.video.pause();
-    media.video.currentTime = 0;
-    media.video.classList.add("projects-preview-hidden");
+    if (!media || !media.preview) return;
+
+    if (media.type === "video") {
+      media.preview.pause();
+      media.preview.currentTime = 0;
+    }
+
+    media.preview.classList.add("projects-preview-hidden");
     media.image.classList.remove("projects-preview-hidden");
   }
 
@@ -86,8 +132,7 @@
     wheel.innerHTML = "";
 
     const total = projects.length;
-    const centerX = 50;
-    const centerY = 50;
+    if (!total) return;
 
     projects.forEach((project, index) => {
       let offset = index - activeIndex;
@@ -119,7 +164,7 @@
 
       const title = document.createElement("div");
       title.className = "projects-wheel-title";
-      title.textContent = project.title;
+      title.textContent = project.title || "Proyecto";
 
       overlay.appendChild(title);
       card.appendChild(overlay);
@@ -130,8 +175,8 @@
       });
 
       card.addEventListener("mouseleave", () => {
-        isPaused = false;
         stopPreview(media);
+        isPaused = false;
       });
 
       card.addEventListener("mousemove", () => {
@@ -150,7 +195,7 @@
         }
 
         if (now - lastClickTime < 350) {
-          window.location.href = project.link;
+          window.location.href = project.link || "#";
           return;
         }
 
@@ -175,10 +220,10 @@
       body.className = "projects-grid-body";
 
       const title = document.createElement("h3");
-      title.textContent = project.title;
+      title.textContent = project.title || "Proyecto";
 
       const description = document.createElement("p");
-      description.textContent = project.description;
+      description.textContent = project.description || "";
 
       body.appendChild(title);
       body.appendChild(description);
@@ -188,9 +233,8 @@
 
       card.addEventListener("mouseenter", () => playPreview(media));
       card.addEventListener("mouseleave", () => stopPreview(media));
-
       card.addEventListener("click", () => {
-        window.location.href = project.link;
+        window.location.href = project.link || "#";
       });
 
       grid.appendChild(card);
@@ -198,17 +242,20 @@
   }
 
   function nextProject() {
+    if (!projects.length) return;
     activeIndex = (activeIndex + 1) % projects.length;
     renderWheel();
   }
 
   function prevProject() {
+    if (!projects.length) return;
     activeIndex = (activeIndex - 1 + projects.length) % projects.length;
     renderWheel();
   }
 
   function startAutoRotate() {
     stopAutoRotate();
+
     autoRotate = setInterval(() => {
       if (!isPaused && catalogView.classList.contains("active")) {
         nextProject();
@@ -217,16 +264,24 @@
   }
 
   function stopAutoRotate() {
-    if (autoRotate) clearInterval(autoRotate);
+    if (autoRotate) {
+      clearInterval(autoRotate);
+      autoRotate = null;
+    }
   }
 
-  catalogBtn?.addEventListener("click", () => setView("catalog"));
-  gridBtn?.addEventListener("click", () => setView("grid"));
-  nextBtn?.addEventListener("click", nextProject);
-  prevBtn?.addEventListener("click", prevProject);
+  catalogBtn.addEventListener("click", () => setView("catalog"));
+  gridBtn.addEventListener("click", () => setView("grid"));
+  nextBtn.addEventListener("click", nextProject);
+  prevBtn.addEventListener("click", prevProject);
 
   try {
     const response = await fetch("../../data/projects-catalog.json");
+
+    if (!response.ok) {
+      throw new Error(`No se pudo cargar el JSON. HTTP ${response.status}`);
+    }
+
     projects = await response.json();
 
     if (!Array.isArray(projects) || !projects.length) {
@@ -235,12 +290,19 @@
       return;
     }
 
+    projects = projects.map((project) => ({
+      ...project,
+      cover: normalizePath(project.cover),
+      preview: normalizePath(project.preview),
+    }));
+
     renderWheel();
     renderGrid();
     startAutoRotate();
   } catch (error) {
     console.error("Error cargando catálogo de proyectos:", error);
     focusTitle.textContent = "No se pudo cargar el catálogo";
-    focusDescription.textContent = "Revisa la ruta del JSON o la estructura de los datos.";
+    focusDescription.textContent =
+      "Revisa la ruta del JSON, ejecuta el proyecto desde un servidor local y valida las rutas de imágenes/GIF.";
   }
 })();
