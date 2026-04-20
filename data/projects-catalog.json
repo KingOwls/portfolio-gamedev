@@ -1,0 +1,156 @@
+[
+  {
+    "id": 1,
+    "slug": "symphony-of-justice",
+    "title": "Symphony of Justice",
+    "category": "Diseño de Videojuegos",
+    "description": "Proyecto de fantasía inspirado en cuatro ramas de la justicia: Juicio, Clemencia, Venganza y Sabiduría, desplegadas en un mundo de 13 naciones.",
+    "cover": "../../assets/img/projects/diseno/SymphonyJustice.png",
+    "previewType": "gif",
+    "preview": "../../assets/video/demos/SympJustVid.gif",
+    "link": "../juegos/symphony-of-justice.html"
+  },
+  {
+    "id": 2,
+    "slug": "arcane-island",
+    "title": "Arcane Island",
+    "category": "Diseño de Videojuegos",
+    "description": "Un mundo que recuerda fragmentos de su pasado, pero no cómo comenzó. Un proyecto MMO de misterio, memoria y origen incierto.",
+    "cover": "../../assets/img/projects/diseno/ArcaneIsland.jpeg",
+    "previewType": "gif",
+    "preview": "../../assets/video/demos/ArcaneIsland.gif",
+    "link": "../juegos/arcane-island.html"
+  },
+  {
+    "id": 3,
+    "slug": "bot-de-discord",
+    "title": "Bot de Discord",
+    "category": "Prototipos y herramientas",
+    "description": "Sistema interactivo orientado a automatización, estructuras RPG y experimentación con lógica de juego en Discord.",
+    "cover": "../../assets/img/projects/desarrollo/BotDiscord.png",
+    "previewType": "gif",
+    "preview": "../../assets/video/demos/BotDiscord.gif",
+    "link": "../juegos/bot-de-discord.html"
+  },
+  {
+    "id": 4,
+    "slug": "semillero",
+    "title": "Semillero de Videojuegos",
+    "category": "Investigación y desarrollo",
+    "description": "Espacio de exploración académica y práctica en torno a diseño, documentación y desarrollo de videojuegos.",
+    "cover": "../../assets/img/projects/analisis/Semillero.png",
+    "previewType": "gif",
+    "preview": "../../assets/video/demos/Semillero.gif",
+    "link": "../juegos/semillero.html"
+  },
+  {
+    "id": 5,
+    "slug": "servidores-online",
+    "title": "Servidores Online",
+    "category": "Infraestructura",
+    "description": "Configuración y administración de entornos multijugador, despliegue de servidores y soporte técnico para experiencias online.",
+    "cover": "../../assets/img/projects/desarrollo/ServidorMine.png",
+    "previewType": "gif",
+    "preview": "../../assets/video/demos/Infrastructura.gif",
+    "link": "../juegos/servidores-en-linea.html"
+  },
+  {
+    "id": 6,
+    "slug": "Columnas-Opinion",
+    "title": "Columnas de Opinion",
+    "category": "Diseño de Videojuegos",
+    "description": "Proyecto de fantasía inspirado en cuatro ramas de la justicia: Juicio, Clemencia, Venganza y Sabiduría, desplegadas en un mundo de 13 naciones.",
+    "cover": "../../assets/img/projects/analisis/AnsVideojuegos.png",
+    "previewType": "gif",
+    "preview": ".../../assets/video/demos/Columnista.gif",
+    "link": "../juegos/symphony-of-justice.html"
+  },
+  {
+    "id": 7,
+    "slug": "arcane-butler",
+    "title": "Arcane Butler",
+    "category": "Diseño de Videojuegos",
+    "description": "Un mundo que recuerda fragmentos de su pasado, pero no cómo comenzó. Un proyecto MMO de misterio, memoria y origen incierto.",
+    "cover": "../../assets/img/projects/desarrollo/Arcane_Butler.png",
+    "previewType": "gif",
+    "preview": ".../../assets/video/demos/ArcaneButler.gif",
+    "link": "../juegos/arcane-island.html"
+  },
+  {
+    "id": 8,
+    "slug": "juegos-web",
+    "title": "Juegos Web",
+    "category": "Prototipos y herramientas",
+    "description": "Sistema interactivo orientado a automatización, estructuras RPG y experimentación con lógica de juego en Discord.",
+    "cover": "../../assets/img/projects/desarrollo/Juegos_Web.png",
+    "previewType": "gif",
+    "preview": "../../assets/video/demos/WebGames.gif",
+    "link": "../juegos/bot-de-discord.html"
+  },
+  {
+    "id": 9,
+    "slug": "Epic-Mcduck",
+    "title": "Epic McDuck",
+    "category": "Investigación y desarrollo",
+    "description": "Espacio de exploración académica y práctica en torno a diseño, documentación y desarrollo de videojuegos.",
+    "cover": "../../assets/img/projects/diseno/EpicMcDuck.png",
+    "previewType": "gif",
+    "preview": "../../assets/video/demos/McDuck.gif",
+    "link": "../juegos/semillero.html"
+  },
+  {
+    "id": 10,
+    "slug": "Gastronomia-Corrupta",
+    "title": "Gastronomia Corrupta",
+    "category": "Infraestructura",
+    "description": "Configuración y administración de entornos multijugador, despliegue de servidores y soporte técnico para experiencias online.",
+    "cover": "../../assets/img/projects/diseno/GastroCorrupt.png",
+    "previewType": "gif",
+    "preview": "../../assets/video/demos/Gastronomia.gif",
+    "link": "../juegos/servidores-en-linea.html"
+  },
+  {
+    "id": 11,
+    "slug": "Kirby-Metroidvania",
+    "title": "Kirby Laberinto de espejos 2",
+    "category": "Diseño de Videojuegos",
+    "description": "Un mundo que recuerda fragmentos de su pasado, pero no cómo comenzó. Un proyecto MMO de misterio, memoria y origen incierto.",
+    "cover": "../../assets/img/projects/diseno/Kirby2.png",
+    "previewType": "gif",
+    "preview": "../../assets/video/demos/Kirby.gif",
+    "link": "../juegos/arcane-island.html"
+  },
+  {
+    "id": 12,
+    "slug": "Koro-sensei",
+    "title": "Assassination Classroom Teacher go Back",
+    "category": "Prototipos y herramientas",
+    "description": "Sistema interactivo orientado a automatización, estructuras RPG y experimentación con lógica de juego en Discord.",
+    "cover": "../../assets/img/projects/diseno/KoroSensei.png",
+    "previewType": "gif",
+    "preview": "../../assets/video/demos/KoroSensei.gif",
+    "link": "../juegos/bot-de-discord.html"
+  },
+  {
+    "id": 13,
+    "slug": "Indie-Horror",
+    "title": "Luigi's Mansion 4",
+    "category": "Investigación y desarrollo",
+    "description": "Espacio de exploración académica y práctica en torno a diseño, documentación y desarrollo de videojuegos.",
+    "cover": "../../assets/img/projects/diseno/Luigis.png",
+    "previewType": "gif",
+    "preview": ".../../assets/video/demos/LuigisMansion.gif",
+    "link": "../juegos/semillero.html"
+  },
+  {
+    "id": 14,
+    "slug": "Exorcista-Juicio",
+    "title": "Exorcista del Juicio",
+    "category": "Infraestructura",
+    "description": "Configuración y administración de entornos multijugador, despliegue de servidores y soporte técnico para experiencias online.",
+    "cover": "../../assets/img/projects/diseno/Exorcist.png",
+    "previewType": "gif",
+    "preview": "../../assets/video/demos/Sacerdote.gif",
+    "link": "../juegos/servidores-en-linea.html"
+  }
+]
