@@ -25,79 +25,87 @@
     </div>
   </header>
 
-  <main>
-    <section class="page-hero">
-      <div class="container">
-        <p class="section-tag">Sobre mí</p>
-        <h1>Diseñador, desarrollador y analista de videojuegos</h1>
-        <p class="hero-description">
-          Espacio orientado al diseño de experiencias interactivas, construcción de prototipos,
-          análisis estructural de videojuegos y exploración técnica de sistemas jugables.
+  <main class="about-page">
+<section class="about-interface">
+  <div class="about-scene" id="aboutScene">
+    <div class="about-scene-bg" id="aboutDisplayBg"></div>
+    <div class="about-scene-noise"></div>
+    <div class="about-scene-grid"></div>
+    <div class="about-scene-glow"></div>
+
+    <div class="container about-scene-inner">
+      <aside class="about-orbit-panel">
+        <p class="section-tag">Navegación</p>
+        <h2>Rueda de bloques</h2>
+        <p class="about-wheel-description">
+          Seis dimensiones del perfil profesional organizadas como una media luna interactiva.
+          Usa la rueda o las flechas para cambiar de bloque.
         </p>
-      </div>
-    </section>
 
-    <section class="about-intro">
-      <div class="container">
-        <div class="card">
-          <h2>Presentación</h2>
-          <p>
-            Este portafolio reúne proyectos, conceptos, prototipos y ejercicios relacionados con
-            videojuegos, desarrollo interactivo y análisis de experiencias. Mi enfoque combina diseño
-            de sistemas, implementación funcional y estudio del videojuego como obra, producto y entorno técnico.
-          </p>
-        </div>
-      </div>
-    </section>
+        <div class="about-arc" id="aboutWheel">
+          <div class="about-arc-ring" id="aboutWheelRing"></div>
 
-    <section class="about-focus">
-      <div class="container">
-        <div class="section-heading">
-          <p class="section-tag">Enfoque</p>
-          <h2>Áreas principales</h2>
+          <div class="about-arc-core">
+            <span class="about-arc-core-tag">JCrow</span>
+            <strong>About Me</strong>
+            <small>6 bloques</small>
+          </div>
         </div>
 
-        <div class="card-grid">
-          <article class="card">
-            <h3>Diseño de videojuegos</h3>
-            <p>Construcción de mecánicas, sistemas, identidad conceptual, documentación y experiencia de juego.</p>
-          </article>
-
-          <article class="card">
-            <h3>Desarrollo</h3>
-            <p>Implementación de prototipos, lógica funcional, interfaces y estructuras interactivas.</p>
-          </article>
-
-          <article class="card">
-            <h3>Prototipos y herramientas</h3>
-            <p>Exploración mediante Unity, RPG Maker MV, bots de Discord y desarrollo web aplicado.</p>
-          </article>
-
-          <article class="card">
-            <h3>Análisis de videojuegos</h3>
-            <p>Estudio del videojuego desde su estructura, intención, contexto, publicación y experiencia.</p>
-          </article>
+        <div class="about-wheel-controls">
+          <button id="aboutPrevBtn" class="about-wheel-control" type="button" aria-label="Bloque anterior">←</button>
+          <button id="aboutNextBtn" class="about-wheel-control" type="button" aria-label="Siguiente bloque">→</button>
         </div>
-      </div>
-    </section>
 
-    <section class="about-cta">
-      <div class="container">
-        <div class="card">
-          <h2>Explorar el portafolio</h2>
-          <p>
-            Puedes recorrer los proyectos, revisar las áreas principales del trabajo realizado
-            o explorar análisis y reflexiones sobre videojuegos.
-          </p>
+        <p class="about-wheel-hint">
+          Cada bloque cambia el fondo, la figura principal, el acompañante visual y la composición.
+        </p>
+      </aside>
 
-          <div class="hero-actions">
+      <article class="about-display" id="aboutDisplay">
+        <div class="about-display-panel">
+          <div class="about-display-badge" id="aboutDisplayBadge">Bloque 01 · Presentación</div>
+
+          <p class="about-display-kicker" id="aboutDisplayKicker">Jorge Osorio / JCrow</p>
+          <h2 id="aboutDisplayTitle">Cargando perfil...</h2>
+
+          <p class="about-display-intro" id="aboutDisplayIntro"></p>
+          <p class="about-display-body" id="aboutDisplayBody"></p>
+
+          <ul class="about-display-highlights" id="aboutDisplayHighlights"></ul>
+
+          <div class="about-display-tags" id="aboutDisplayTags"></div>
+
+          <div class="about-display-actions">
             <a href="../proyectos/proyectos.html" class="btn btn-primary">Ver proyectos</a>
             <a href="../analista/analista.html" class="btn btn-secondary">Ver análisis</a>
             <a href="../../assets/pdf/Hoja_de_vida.pdf" target="_blank" class="btn btn-secondary">Hoja de vida</a>
           </div>
         </div>
-      </div>
-    </section>
+
+        <div class="about-display-visual">
+          <img
+            id="aboutDisplayFigure"
+            class="about-display-figure"
+            src=""
+            alt=""
+          />
+
+          <img
+            id="aboutDisplayCompanion"
+            class="about-display-companion"
+            src=""
+            alt=""
+          />
+
+          <div class="about-display-sprite-track" id="aboutDisplaySpriteTrack">
+            <div id="aboutDisplaySprite" class="about-display-sprite about-hidden"></div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
   </main>
 
   <footer class="site-footer">
@@ -108,5 +116,6 @@
   </footer>
 
   <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/about.js"></script>
 </body>
 </html>
