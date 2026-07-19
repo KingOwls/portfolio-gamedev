@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#111a31"/>
+      <stop offset="1" stop-color="#080d1b"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  <circle cx="960" cy="160" r="220" fill="none" stroke="#d4af37" stroke-opacity="0.22" stroke-width="3"/>
+  <circle cx="200" cy="680" r="270" fill="none" stroke="#6d8cff" stroke-opacity="0.16" stroke-width="3"/>
+  <text x="90" y="350" fill="#d4af37" font-family="Segoe UI, sans-serif" font-size="34" letter-spacing="6">CONCEPT ART PENDIENTE</text>
+  <text x="90" y="445" fill="#f3f4f6" font-family="Segoe UI, sans-serif" font-size="76" font-weight="700">Lord Corvin Thornsworth</text>
+  <text x="94" y="505" fill="#b8c0d4" font-family="Segoe UI, sans-serif" font-size="30">Espacio reservado para la ilustración final</text>
+</svg>

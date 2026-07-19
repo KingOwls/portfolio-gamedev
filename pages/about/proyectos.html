@@ -8,21 +8,21 @@
   <link rel="icon" type="image/gif" href="../../assets/img/icons/bird_anim_01.gif" />
   <link rel="stylesheet" href="../../assets/css/main.css" />
 </head>
-<body>
+<body class="site-layout">
 
-  <header class="site-header">
+  <header class="site-header" data-site-header>
     <div class="container nav-container">
-      <a href="../../index.html" class="logo">JCrow</a>
+      <a href="../../index.html" class="logo" aria-label="JCrow, volver al inicio">JCrow</a>
 
-      <nav class="nav-menu" id="navMenu">
+      <nav class="nav-menu" id="navMenu" aria-label="Navegación principal">
         <a href="../../index.html">Inicio</a>
-        <a href="../about/about.html">Sobre mí</a>
-        <a href="../about/proyectos.html">Proyectos / Áreas</a>
+        <a href="./about.html">Sobre mí</a>
+        <a href="./proyectos.html" aria-current="page">Proyectos / Áreas</a>
         <a href="../analista/analista.html">Análisis de juegos</a>
-        <a href="../../assets/pdf/Hoja_de_vida.pdf" target="_blank">Hoja de vida</a>
+        <a href="../../assets/pdf/Hoja_de_vida.pdf" target="_blank" rel="noopener noreferrer">Hoja de vida</a>
       </nav>
 
-      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">☰</button>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Abrir menú" aria-controls="navMenu" aria-expanded="false">☰</button>
     </div>
   </header>
 
@@ -45,7 +45,7 @@
           </div>
 
           <p class="projects-help">
-            Hover pausa la rueda y muestra preview. Doble click abre el proyecto.
+            Pasa el cursor para ver el preview. Un clic selecciona; vuelve a pulsar la tarjeta central para abrirla.
           </p>
         </div>
       </div>
@@ -68,7 +68,7 @@
             <p id="projectsFocusDescription">
               Preparando catálogo visual de proyectos.
             </p>
-            <a id="projectsFocusLink" href="#" class="btn btn-primary">Abrir proyecto</a>
+            <a id="projectsFocusLink" href="../juegos/symphony-of-justice.html" class="btn btn-primary">Abrir proyecto</a>
           </div>
         </div>
 
@@ -79,14 +79,15 @@
     </section>
   </main>
 
-  <footer class="site-footer">
+  <footer class="site-footer" data-site-footer>
     <div class="container footer-content">
-      <p>© 2026 - Portafolio profesional</p>
-      <p>Diseño, desarrollo y análisis de videojuegos</p>
+      <p><strong>© 2026 · JCrow</strong> · Portafolio profesional</p>
+      <p>Game Design técnico · Desarrollo · Investigación</p>
     </div>
   </footer>
 
   <script src="../../assets/js/main.js"></script>
   <script src="../../assets/js/projects.js"></script>
+  <script src="../../assets/js/navigation.js"></script>
 </body>
 </html>

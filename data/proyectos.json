@@ -6,7 +6,7 @@
     "synopsis": "Un proyecto que plantea que la justicia no es única, sino que se divide en cuatro ramas fundamentales: Juicio, Clemencia, Venganza y Sabiduría, dentro de un mundo de fantasía y exploración a través de 13 naciones.",
     "image": "./assets/img/projects/diseno/SymphonyJustice.png",
     "buttonText": "Investigación Symphonia Iustitiae",
-    "link": "#"
+    "link": "./pages/juegos/symphony-of-justice.html"
   },
   {
     "id": 2,
@@ -15,7 +15,7 @@
     "synopsis": "Si toda historia tiene un pasado, pero puedes recordar lo ocurrido sin saber cómo llegaste, ¿qué tan real fue ese camino? Desde aquí inicia un mundo que termina sin haber empezado, o quizá empezó desde su propio final.",
     "image": "./assets/img/projects/diseno/ArcaneIsland.jpeg",
     "buttonText": "Investigación Arcane Island",
-    "link": "#"
+    "link": "./pages/juegos/arcane-island.html"
   },
   {
     "id": 3,
@@ -24,7 +24,7 @@
     "synopsis": "Un proyecto de estudiantes para estudiantes, donde puedan encontrar y profundizar sobre la industria de los videojuegos donde aveces se desea iniciar pero no se tiene ni se sabe como hacer esto",
     "image": "./assets/img/projects/analisis/Semillero.png",
     "buttonText": "Actividades Semillero de Videojuegos",
-    "link": "#"
+    "link": "./pages/juegos/semillero-de-videojuegos.html"
   },
   {
     "id": 4,
@@ -33,15 +33,15 @@
     "synopsis": "Pequeños proyectos e Juegos en Linea, se Buscaba entender y aplicar las mecanicas basicas de Juegos simples con proyeccion a incluirlos todos en un solo Lugar",
     "image": "./assets/img/projects/desarrollo/Juegos_Web.png",
     "buttonText": "Juegos en Linea",
-    "link": "#"
+    "link": "./pages/juegos/juegos-web.html"
   },
   {
     "id": 5,
-    "title": "La isla sin Reino",
-    "category": "Desarrollo de Videojuegos",
-    "synopsis": "Un bot de discord el cual Intentaba recrear los entornos basicos de un MMORPG por tunros, Un proyecto prototipo de Mecanicas con posibilidad de escalarlo a un juego completo",
+    "title": "Bots RPG de Discord",
+    "category": "Game Design técnico y desarrollo",
+    "synopsis": "Dos iteraciones de un RPG social en Discord: Profesor Luther priorizó sistemas jugables funcionales y Thaddeus Morrowind reorganizó la experiencia sobre una arquitectura escalable en C#.",
     "image": "./assets/img/projects/desarrollo/BotDiscord.png",
-    "buttonText": "Proyecto Discord",
-    "link": "#"
+    "buttonText": "Caso de estudio de los bots",
+    "link": "./pages/juegos/bot-de-discord.html"
   }
 ]

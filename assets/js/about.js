@@ -19,7 +19,21 @@ const aboutSections = [
       background: "../../assets/img/about/backgrounds/about-presentacion.jpg",
       figure: "../../assets/img/about/figures/crow-main.png",
       companion: "../../assets/img/about/companions/crow-idle.gif",
-      sprite: null
+      sprite: null,
+      nodeMedia: "../../assets/img/about/nodes/crow-node.gif",
+      layout: {
+        panelWidth: "min(44%, 620px)",
+        panelMaxWidth: "620px",
+        panelOpacity: "0.38",
+        figureWidth: "min(36%, 440px)",
+        figureRight: "8%",
+        figureBottom: "0%",
+        figureOpacity: "0.95",
+        companionWidth: "58px",
+        companionRight: "12%",
+        companionTop: "7%",
+        companionOpacity: "0.58"
+      }
     }
   },
   {
@@ -40,9 +54,23 @@ const aboutSections = [
     tags: ["Blueprint", "Sistemas", "Documentación", "Referencias", "Investigación"],
     visual: {
       background: "../../assets/img/about/backgrounds/about-enfoque.jpg",
-      figure: "../../assets/img/about/figures/design-board.png",
-      companion: "",
-      sprite: null
+      figure: "../../assets/img/about/figures/concept-art.png",
+      companion: "../../assets/img/about/companions/gary.gif",
+      sprite: null,
+      nodeMedia: "../../assets/img/about/nodes/penguin-clap.gif",
+      layout: {
+        panelWidth: "min(44%, 620px)",
+        panelMaxWidth: "620px",
+        panelOpacity: "0.38",
+        figureWidth: "min(36%, 440px)",
+        figureRight: "8%",
+        figureBottom: "0%",
+        figureOpacity: "0.95",
+        companionWidth: "58px",
+        companionRight: "12%",
+        companionTop: "7%",
+        companionOpacity: "0.58"
+      }
     }
   },
   {
@@ -64,14 +92,21 @@ const aboutSections = [
     visual: {
       background: "../../assets/img/about/backgrounds/about-curiosidad.jpg",
       figure: "../../assets/img/about/figures/curiosity-collage.png",
-      companion: "../../assets/img/about/companions/undertale-soul.gif",
-      sprite: {
-        url: "../../assets/img/about/sprites/kirby-walk.png",
-        frameCount: 8,
-        duration: 800,
-        renderWidth: 64,
-        renderHeight: 64,
-        travelDuration: 12
+      companion: "../../assets/img/about/companions/mcduck.gif",
+      sprite: null,
+      nodeMedia: "../../assets/img/about/nodes/mickey.gif",
+      layout: {
+        panelWidth: "min(44%, 620px)",
+        panelMaxWidth: "620px",
+        panelOpacity: "0.38",
+        figureWidth: "min(36%, 440px)",
+        figureRight: "8%",
+        figureBottom: "0%",
+        figureOpacity: "0.95",
+        companionWidth: "58px",
+        companionRight: "12%",
+        companionTop: "7%",
+        companionOpacity: "0.58"
       }
     }
   },
@@ -94,14 +129,21 @@ const aboutSections = [
     visual: {
       background: "../../assets/img/about/backgrounds/about-tools.jpg",
       figure: "../../assets/img/about/figures/tools-hub.png",
-      companion: "",
-      sprite: {
-        url: "../../assets/img/about/sprites/clubpenguin-slide.png",
-        frameCount: 6,
-        duration: 760,
-        renderWidth: 72,
-        renderHeight: 72,
-        travelDuration: 14
+      companion: "../../assets/img/about/companions/teddie.gif",
+      sprite: null,
+      nodeMedia: "../../assets/img/about/nodes/persona.gif",
+      layout: {
+        panelWidth: "min(44%, 620px)",
+        panelMaxWidth: "620px",
+        panelOpacity: "0.38",
+        figureWidth: "min(36%, 440px)",
+        figureRight: "8%",
+        figureBottom: "0%",
+        figureOpacity: "0.95",
+        companionWidth: "58px",
+        companionRight: "12%",
+        companionTop: "7%",
+        companionOpacity: "0.58"
       }
     }
   },
@@ -123,9 +165,23 @@ const aboutSections = [
     tags: ["Symphony of Justice", "Arcane Island", "Bot de Discord", "Semillero", "Servidores"],
     visual: {
       background: "../../assets/img/about/backgrounds/about-projects.jpg",
-      figure: "../../assets/img/about/figures/projects-collage.png",
-      companion: "",
-      sprite: null
+      figure: "../../assets/img/about/figures/project-collage.png",
+      companion: "../../assets/img/about/companions/magolor.gif",
+      sprite: null,
+      nodeMedia: "../../assets/img/about/nodes/kirby.gif",
+      layout: {
+        panelWidth: "min(44%, 620px)",
+        panelMaxWidth: "620px",
+        panelOpacity: "0.38",
+        figureWidth: "min(36%, 440px)",
+        figureRight: "8%",
+        figureBottom: "0%",
+        figureOpacity: "0.95",
+        companionWidth: "58px",
+        companionRight: "12%",
+        companionTop: "7%",
+        companionOpacity: "0.58"
+      }
     }
   },
   {
@@ -146,12 +202,128 @@ const aboutSections = [
     tags: ["Octavo arte", "Ingeniería inversa", "Géneros", "Comunidad", "Evolución"],
     visual: {
       background: "../../assets/img/about/backgrounds/about-philosophy.jpg",
-      figure: "../../assets/img/about/figures/philosophy-sigil.png",
-      companion: "../../assets/img/about/companions/crow-idle.gif",
-      sprite: null
+      figure: "../../assets/img/about/figures/pokechess.png",
+      companion: "../../assets/img/about/companions/kazuha.gif",
+      sprite: null,
+      nodeMedia: "../../assets/img/about/nodes/hsr.gif",
+      layout: {
+        panelWidth: "min(44%, 620px)",
+        panelMaxWidth: "620px",
+        panelOpacity: "0.38",
+        figureWidth: "min(36%, 440px)",
+        figureRight: "8%",
+        figureBottom: "0%",
+        figureOpacity: "0.95",
+        companionWidth: "58px",
+        companionRight: "12%",
+        companionTop: "7%",
+        companionOpacity: "0.58"
+      }
     }
   }
 ];
+
+const aboutSectionLinks = {
+  presentacion: {
+    primary: { label: "Ver proyecto", href: "" },
+    secondary: { label: "Ver análisis", href: "" },
+    tertiary: { label: "Hoja de vida", href: "" }
+  },
+  enfoque: {
+    primary: { label: "Proyecto relacionado", href: "" },
+    secondary: { label: "Ver documentación", href: "" },
+    tertiary: { label: "Hoja de vida", href: "" }
+  },
+  curiosidad: {
+    primary: { label: "Juego analizado", href: "" },
+    secondary: { label: "Ver análisis", href: "" },
+    tertiary: { label: "Hoja de vida", href: "" }
+  },
+  herramientas: {
+    primary: { label: "Ver herramientas", href: "" },
+    secondary: { label: "Proyecto técnico", href: "" },
+    tertiary: { label: "Hoja de vida", href: "" }
+  },
+  proyectos: {
+    primary: { label: "Proyecto destacado", href: "" },
+    secondary: { label: "Explorar proyectos", href: "" },
+    tertiary: { label: "Hoja de vida", href: "" }
+  },
+  filosofia: {
+    primary: { label: "Proyecto relacionado", href: "" },
+    secondary: { label: "Ver análisis", href: "" },
+    tertiary: { label: "Hoja de vida", href: "" }
+  }
+};
+
+const aboutSmartLayouts = {
+  presentacion: {
+    gridWidth: "min(100%, 1180px)",
+    gridMaxWidth: "1180px",
+    panelOpacity: "0.18",
+    imagePanelMinHeight: "340px",
+    figureMaxWidth: "430px",
+    figureOpacity: "0.98",
+    companionWidth: "56px",
+    companionOpacity: "0.78",
+    companionDuration: "7.2s"
+  },
+  enfoque: {
+    gridWidth: "min(100%, 1180px)",
+    gridMaxWidth: "1180px",
+    panelOpacity: "0.20",
+    imagePanelMinHeight: "340px",
+    figureMaxWidth: "420px",
+    figureOpacity: "0.98",
+    companionWidth: "56px",
+    companionOpacity: "0.78",
+    companionDuration: "7.4s"
+  },
+  curiosidad: {
+    gridWidth: "min(100%, 1200px)",
+    gridMaxWidth: "1200px",
+    panelOpacity: "0.18",
+    imagePanelMinHeight: "340px",
+    figureMaxWidth: "400px",
+    figureOpacity: "0.98",
+    companionWidth: "54px",
+    companionOpacity: "0.78",
+    companionDuration: "6.8s"
+  },
+  herramientas: {
+    gridWidth: "min(100%, 1180px)",
+    gridMaxWidth: "1180px",
+    panelOpacity: "0.19",
+    imagePanelMinHeight: "340px",
+    figureMaxWidth: "420px",
+    figureOpacity: "0.98",
+    companionWidth: "56px",
+    companionOpacity: "0.78",
+    companionDuration: "7.1s"
+  },
+  proyectos: {
+    gridWidth: "min(100%, 1220px)",
+    gridMaxWidth: "1220px",
+    panelOpacity: "0.16",
+    imagePanelMinHeight: "350px",
+    figureMaxWidth: "390px",
+    figureOpacity: "0.98",
+    companionWidth: "54px",
+    companionOpacity: "0.78",
+    companionDuration: "6.6s"
+  },
+  filosofia: {
+    gridWidth: "min(100%, 1220px)",
+    gridMaxWidth: "1220px",
+    panelOpacity: "0.17",
+    imagePanelMinHeight: "350px",
+    figureMaxWidth: "410px",
+    figureOpacity: "0.98",
+    companionWidth: "54px",
+    companionOpacity: "0.78",
+    companionDuration: "7.6s"
+  }
+};
 
 (function initAboutPage() {
   const ring = document.getElementById("aboutWheelRing");
@@ -172,17 +344,18 @@ const aboutSections = [
     bg: document.getElementById("aboutDisplayBg"),
     figure: document.getElementById("aboutDisplayFigure"),
     companion: document.getElementById("aboutDisplayCompanion"),
-    spriteTrack: document.getElementById("aboutDisplaySpriteTrack"),
-    sprite: document.getElementById("aboutDisplaySprite")
+    actionLinks: Array.from(document.querySelectorAll(".about-display-actions a"))
   };
 
   const state = {
     activeIndex: 0,
+    previousIndex: 0,
     autoRotate: null,
     paused: false,
     nodeButtons: [],
     isAnimating: false,
-    isFirstRender: true
+    isFirstRender: true,
+    animationLockMs: 650
   };
 
   function safeImage(img, src, alt = "") {
@@ -209,6 +382,47 @@ const aboutSections = [
     return offset;
   }
 
+  function normalizeDirection(newIndex, oldIndex, total) {
+    const forwardDistance = (newIndex - oldIndex + total) % total;
+    const backwardDistance = (oldIndex - newIndex + total) % total;
+    return forwardDistance <= backwardDistance ? 1 : -1;
+  }
+
+  function isLegacyLayout(layout) {
+    if (!layout) return true;
+    return !(
+      layout.gridWidth ||
+      layout.gridMaxWidth ||
+      layout.titleWidth ||
+      layout.titleMaxWidth ||
+      layout.imagePanelMinHeight ||
+      layout.figureMaxWidth ||
+      layout.companionDuration
+    );
+  }
+
+  function getSectionLayout(section) {
+    const smart = aboutSmartLayouts[section.id] || {};
+    const raw = section.visual?.layout || {};
+
+    if (isLegacyLayout(raw)) {
+      return smart;
+    }
+
+    return {
+      ...smart,
+      gridWidth: raw.gridWidth || raw.titleWidth || smart.gridWidth,
+      gridMaxWidth: raw.gridMaxWidth || raw.titleMaxWidth || smart.gridMaxWidth,
+      panelOpacity: raw.panelOpacity || smart.panelOpacity,
+      imagePanelMinHeight: raw.imagePanelMinHeight || smart.imagePanelMinHeight,
+      figureMaxWidth: raw.figureMaxWidth || smart.figureMaxWidth,
+      figureOpacity: raw.figureOpacity || smart.figureOpacity,
+      companionWidth: raw.companionWidth || smart.companionWidth,
+      companionOpacity: raw.companionOpacity || smart.companionOpacity,
+      companionDuration: raw.companionDuration || smart.companionDuration
+    };
+  }
+
   function createWheelNodes() {
     ring.innerHTML = "";
     state.nodeButtons = [];
@@ -219,7 +433,12 @@ const aboutSections = [
       button.className = "about-wheel-node";
       button.setAttribute("aria-label", `Ir a ${section.title}`);
 
+      const mediaMarkup = section.visual?.nodeMedia
+        ? `<span class="about-wheel-node-media"><img src="${section.visual.nodeMedia}" alt="${section.shortLabel}"></span>`
+        : "";
+
       button.innerHTML = `
+        ${mediaMarkup}
         <span class="about-wheel-node-index">${String(index + 1).padStart(2, "0")}</span>
         <span class="about-wheel-node-label">${section.shortLabel}</span>
       `;
@@ -235,28 +454,30 @@ const aboutSections = [
 
   function positionWheelNodes() {
     const total = aboutSections.length;
-
-    const centerX = 92;
-    const centerY = 210;
-    const radius = 154;
-    const step = 38;
+    const centerX = 96;
+    const centerY = 224;
+    const radius = 150;
+    const step = 31;
 
     state.nodeButtons.forEach((button, index) => {
       const offset = shortestOffset(index, state.activeIndex, total);
-      const angleDeg = offset * step;
+      const angleDeg = -90 + offset * step;
       const angleRad = (angleDeg * Math.PI) / 180;
 
       const x = centerX + Math.cos(angleRad) * radius;
       const y = centerY + Math.sin(angleRad) * radius;
 
-      const scale = offset === 0 ? 1.12 : Math.max(0.78, 1 - Math.abs(offset) * 0.1);
-      const opacity = Math.max(0.42, 1 - Math.abs(offset) * 0.12);
+      const distance = Math.abs(offset);
+      const scale = offset === 0 ? 1.15 : Math.max(0.78, 1 - distance * 0.08);
+      const opacity = Math.max(0.34, 1 - distance * 0.11);
+      const blur = Math.min(3.2, distance * 0.75);
 
       button.style.left = `${x}px`;
       button.style.top = `${y}px`;
       button.style.transform = `translate(-50%, -50%) scale(${scale})`;
       button.style.opacity = `${opacity}`;
-      button.style.zIndex = `${100 - Math.abs(offset)}`;
+      button.style.zIndex = `${100 - distance}`;
+      button.style.filter = `blur(${blur}px)`;
 
       button.classList.toggle("is-active", index === state.activeIndex);
     });
@@ -280,23 +501,54 @@ const aboutSections = [
     });
   }
 
-  function setSprite(spriteData) {
-    if (!spriteData) {
-      elements.spriteTrack.classList.remove("is-active");
-      elements.sprite.classList.add("about-hidden");
-      elements.sprite.style.removeProperty("--sprite-url");
-      return;
+  function setBackground(section) {
+    const backgroundLayers = section.visual?.background
+      ? `
+        linear-gradient(180deg, rgba(3, 7, 18, 0.08), rgba(3, 7, 18, 0.32)),
+        radial-gradient(circle at 32% 24%, rgba(255,255,255,0.05), transparent 30%),
+        url("${section.visual.background}")
+      `
+      : `
+        linear-gradient(180deg, rgba(3, 7, 18, 0.08), rgba(3, 7, 18, 0.32)),
+        radial-gradient(circle at 32% 24%, rgba(255,255,255,0.05), transparent 30%)
+      `;
+
+    elements.bg.style.backgroundImage = backgroundLayers;
+  }
+
+  function configureActionLink(anchor, config, fallbackLabel) {
+    if (!anchor) return;
+
+    const label = config?.label || fallbackLabel || "Enlace";
+    const href = config?.href || "";
+
+    anchor.textContent = label;
+
+    if (!href) {
+      anchor.setAttribute("href", "#");
+      anchor.classList.add("is-disabled");
+      anchor.setAttribute("aria-disabled", "true");
+      anchor.removeAttribute("target");
+    } else {
+      anchor.setAttribute("href", href);
+      anchor.classList.remove("is-disabled");
+      anchor.removeAttribute("aria-disabled");
+
+      if (/^https?:\/\//.test(href) || href.endsWith(".pdf")) {
+        anchor.setAttribute("target", "_blank");
+      } else {
+        anchor.removeAttribute("target");
+      }
     }
+  }
 
-    elements.spriteTrack.classList.add("is-active");
-    elements.sprite.classList.remove("about-hidden");
+  function applyLinks(sectionId) {
+    const links = aboutSectionLinks[sectionId] || {};
+    const [primary, secondary, tertiary] = elements.actionLinks;
 
-    elements.sprite.style.setProperty("--sprite-url", `url("${spriteData.url}")`);
-    elements.sprite.style.setProperty("--sprite-frame-count", spriteData.frameCount || 1);
-    elements.sprite.style.setProperty("--sprite-duration", `${spriteData.duration || 800}ms`);
-    elements.sprite.style.setProperty("--sprite-render-width", `${spriteData.renderWidth || 64}px`);
-    elements.sprite.style.setProperty("--sprite-render-height", `${spriteData.renderHeight || 64}px`);
-    elements.sprite.style.setProperty("--travel-duration", `${spriteData.travelDuration || 12}s`);
+    configureActionLink(primary, links.primary, "Ver proyecto");
+    configureActionLink(secondary, links.secondary, "Ver análisis");
+    configureActionLink(tertiary, links.tertiary, "Hoja de vida");
   }
 
   function applySectionContent(section) {
@@ -308,25 +560,30 @@ const aboutSections = [
 
     renderHighlights(section.highlights);
     renderTags(section.tags);
-
-    if (section.visual?.background) {
-      elements.bg.style.backgroundImage = `
-        linear-gradient(180deg, rgba(3, 7, 18, 0.25), rgba(3, 7, 18, 0.7)),
-        radial-gradient(circle at 30% 25%, rgba(255,255,255,0.06), transparent 30%),
-        url("${section.visual.background}")
-      `;
-    } else {
-      elements.bg.style.backgroundImage = `
-        linear-gradient(180deg, rgba(3, 7, 18, 0.25), rgba(3, 7, 18, 0.7)),
-        radial-gradient(circle at 30% 25%, rgba(255,255,255,0.06), transparent 30%)
-      `;
-    }
+    setBackground(section);
 
     safeImage(elements.figure, section.visual?.figure, section.title);
     safeImage(elements.companion, section.visual?.companion, `${section.title} companion`);
-    setSprite(section.visual?.sprite);
+    applyLinks(section.id);
+
+    const layout = getSectionLayout(section);
+    const scene = elements.scene;
+
+    scene.style.setProperty("--about-grid-width", layout.gridWidth || "min(100%, 1180px)");
+    scene.style.setProperty("--about-grid-max-width", layout.gridMaxWidth || "1180px");
+    scene.style.setProperty("--about-panel-opacity", layout.panelOpacity || "0.18");
+    scene.style.setProperty("--about-image-panel-min-height", layout.imagePanelMinHeight || "340px");
+    scene.style.setProperty("--about-figure-max-width", layout.figureMaxWidth || "430px");
+    scene.style.setProperty("--about-figure-opacity", layout.figureOpacity || "0.98");
+    scene.style.setProperty("--about-companion-width", layout.companionWidth || "56px");
+    scene.style.setProperty("--about-companion-opacity", layout.companionOpacity || "0.78");
+    scene.style.setProperty("--about-companion-duration", layout.companionDuration || "7.2s");
 
     positionWheelNodes();
+  }
+
+  function clearTransitionClasses() {
+    elements.scene.classList.remove("is-switching", "is-switching-forward", "is-switching-backward");
   }
 
   function renderSection(animate = true) {
@@ -335,28 +592,40 @@ const aboutSections = [
     if (state.isFirstRender || !animate) {
       applySectionContent(section);
       state.isFirstRender = false;
+      clearTransitionClasses();
       return;
     }
 
     if (state.isAnimating) return;
     state.isAnimating = true;
 
+    const direction = normalizeDirection(
+      state.activeIndex,
+      state.previousIndex,
+      aboutSections.length
+    );
+
+    clearTransitionClasses();
     elements.scene.classList.add("is-switching");
+    elements.scene.classList.add(direction === 1 ? "is-switching-forward" : "is-switching-backward");
 
     window.setTimeout(() => {
       applySectionContent(section);
 
       requestAnimationFrame(() => {
         elements.scene.classList.remove("is-switching");
-        window.setTimeout(() => {
-          state.isAnimating = false;
-        }, 520);
       });
+
+      window.setTimeout(() => {
+        clearTransitionClasses();
+        state.isAnimating = false;
+      }, state.animationLockMs);
     }, 220);
   }
 
   function setActiveIndex(index, userTriggered = false) {
     const total = aboutSections.length;
+    state.previousIndex = state.activeIndex;
     state.activeIndex = (index + total) % total;
     renderSection(!state.isFirstRender);
 
@@ -379,7 +648,7 @@ const aboutSections = [
       if (!state.paused && !state.isAnimating) {
         nextSection(false);
       }
-    }, 9000);
+    }, 9500);
   }
 
   function stopAutoplay() {
@@ -408,13 +677,8 @@ const aboutSections = [
     window.addEventListener("resize", positionWheelNodes);
 
     document.addEventListener("keydown", (event) => {
-      if (event.key === "ArrowRight") {
-        nextSection(true);
-      }
-
-      if (event.key === "ArrowLeft") {
-        prevSection(true);
-      }
+      if (event.key === "ArrowRight") nextSection(true);
+      if (event.key === "ArrowLeft") prevSection(true);
     });
   }
 

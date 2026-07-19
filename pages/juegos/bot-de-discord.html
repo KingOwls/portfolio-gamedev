@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profesor Luther &amp; Thaddeus Morrowind | Bots RPG de Discord</title>
+  <meta name="description" content="Caso de estudio comparativo de dos bots RPG desarrollados en C# con Discord.Net: Profesor Luther y Thaddeus Morrowind." />
+  <link rel="stylesheet" href="../../assets/css/main.css" />
+  <link rel="stylesheet" href="../../assets/css/projects/bot-de-discord.css" />
+</head>
+<body class="tdm-page site-layout">
+  <header class="site-header" data-site-header>
+    <div class="container nav-container">
+      <a href="../../index.html" class="logo" aria-label="JCrow, volver al inicio">JCrow</a>
+
+      <nav class="nav-menu" id="navMenu" aria-label="Navegación principal">
+        <a href="../../index.html">Inicio</a>
+        <a href="../about/about.html">Sobre mí</a>
+        <a href="../about/proyectos.html" aria-current="page">Proyectos / Áreas</a>
+        <a href="../analista/analista.html">Análisis de juegos</a>
+        <a href="../../assets/pdf/Hoja_de_vida.pdf" target="_blank" rel="noopener noreferrer">Hoja de vida</a>
+      </nav>
+
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Abrir menú" aria-controls="navMenu" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <main class="tdm-shell">
+    <section class="tdm-hero">
+      <div class="tdm-hero-copy">
+        <p class="tdm-kicker">Caso de estudio · Dos iteraciones de un RPG social</p>
+        <h1>Profesor Luther &amp;<br />Thaddeus Morrowind</h1>
+        <p class="tdm-lead">
+          Dos bots desarrollados en C# para convertir Discord en un entorno jugable. Profesor Luther priorizó
+          mecánicas funcionales, inventario, economía, personajes y administración; Thaddeus Morrowind retomó
+          esos aprendizajes para construir una arquitectura más escalable, con SQL, servicios y separación de responsabilidades.
+        </p>
+
+        <div class="tdm-hero-tags">
+          <span>C#</span>
+          <span>.NET 8 / 9</span>
+          <span>Discord.Net 3.19.1</span>
+          <span>JSON + MySQL</span>
+          <span>EF Core</span>
+          <span>Slash Commands</span>
+        </div>
+
+        <div class="tdm-hero-actions">
+          <a class="btn btn-primary" href="#evolution">Comparar iteraciones</a>
+          <a class="btn btn-secondary" href="#workspace">Explorar sistemas</a>
+        </div>
+      </div>
+
+      <div class="tdm-hero-panels">
+        <article class="tdm-glass-card tdm-hero-card">
+          <span class="tdm-card-label">Resultado del proceso</span>
+          <h2>Del prototipo abundante a una base escalable</h2>
+          <p>
+            La comparación muestra cómo cambiaron las decisiones de persistencia, arquitectura, experiencia de usuario
+            y alcance después de implementar sistemas reales y enfrentarse a errores de integración.
+          </p>
+
+          <div class="tdm-status-list">
+            <div><strong>Profesor Luther</strong><span>Prototipo jugable y amplio</span></div>
+            <div><strong>Thaddeus</strong><span>Arquitectura modular y SQL</span></div>
+            <div><strong>Discord UI</strong><span>Comandos, botones y modales</span></div>
+            <div><strong>Game Design</strong><span>Economía, combate y progresión</span></div>
+          </div>
+        </article>
+
+        <article class="tdm-glass-card tdm-hero-card tdm-hero-card--console">
+          <span class="tdm-card-label">Consola C#</span>
+          <div class="tdm-console-lines">
+            <div><span class="ok">✔</span> Discord.Net 3.19.1 conectado</div>
+            <div><span class="ok">✔</span> Servicios de personajes e inventario cargados</div>
+            <div><span class="ok">✔</span> Slash Commands sincronizados</div>
+            <div><span class="warn">!</span> Datos sensibles excluidos del repositorio</div>
+            <div><span class="ok">✔</span> JSON local y MySQL documentados por alcance</div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="tdm-evolution" id="evolution" aria-label="Comparación entre los dos bots">
+      <article class="tdm-glass-card tdm-evolution-card">
+        <span class="tdm-card-label">Iteración funcional</span>
+        <h2>Profesor Luther</h2>
+        <p>
+          Construido en .NET 8 con persistencia JSON local. Su fortaleza es la cantidad de sistemas jugables
+          integrados y demostrables dentro de Discord.
+        </p>
+        <ul class="tdm-evolution-list">
+          <li>Usuarios, personajes, fichas públicas y privadas.</li>
+          <li>Inventario, equipamiento, consumibles y mascotas.</li>
+          <li>Economía, tienda, comercio, daily y banners.</li>
+          <li>Batallas, dados, permisos y auditoría.</li>
+        </ul>
+      </article>
+
+      <article class="tdm-glass-card tdm-evolution-card">
+        <span class="tdm-card-label">Iteración arquitectónica</span>
+        <h2>Thaddeus Morrowind</h2>
+        <p>
+          Reconstruido en .NET 9 con MySQL y Entity Framework Core. Su fortaleza es separar entidades,
+          servicios, vistas y estados temporales para sostener un crecimiento más ordenado.
+        </p>
+        <ul class="tdm-evolution-list">
+          <li>Usuarios y personajes como entidades independientes.</li>
+          <li>Datos persistentes en SQL y estados vivos en JSON.</li>
+          <li>Servicios de inventario, habilidades y crecimiento de estadísticas.</li>
+          <li>Arquitectura preparada para dungeons, combate y despliegue.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="tdm-workspace" id="workspace">
+      <aside class="tdm-sidebar">
+        <div class="tdm-sidebar-head">
+          <p class="tdm-sidebar-kicker">Panel de módulos</p>
+          <h2>Bot de Discord</h2>
+          <p>Selecciona un bloque para cambiar toda la vista, como si navegaras por un dossier técnico del proyecto.</p>
+        </div>
+
+        <nav class="tdm-module-nav" id="moduleNav" aria-label="Navegación de módulos"></nav>
+
+        <div class="tdm-sidebar-footer">
+          <button class="tdm-nav-btn" id="prevModule" type="button" aria-label="Módulo anterior">←</button>
+          <button class="tdm-nav-btn" id="nextModule" type="button" aria-label="Siguiente módulo">→</button>
+        </div>
+      </aside>
+
+      <section class="tdm-view">
+        <div class="tdm-view-head tdm-glass-card">
+          <div>
+            <p class="tdm-view-index" id="viewIndex">01 · Origen</p>
+            <h2 id="viewTitle">Cargando módulo...</h2>
+          </div>
+          <p class="tdm-view-summary" id="viewSummary"></p>
+        </div>
+
+        <div class="tdm-view-grid">
+          <article class="tdm-glass-card tdm-main-panel">
+            <div class="tdm-main-copy">
+              <p class="tdm-panel-kicker" id="panelKicker"></p>
+              <h3 id="panelHeading"></h3>
+              <p id="panelBody"></p>
+            </div>
+            <div class="tdm-highlight-stack" id="highlightStack"></div>
+          </article>
+
+          <article class="tdm-glass-card tdm-visual-panel">
+            <div id="visualMount" class="tdm-visual-mount"></div>
+          </article>
+
+          <article class="tdm-glass-card tdm-support-panel">
+            <h3 id="supportTitle"></h3>
+            <div id="supportMount"></div>
+          </article>
+
+          <article class="tdm-glass-card tdm-achievement-panel">
+            <h3>Logros y componentes visibles</h3>
+            <ul id="achievementList" class="tdm-achievement-list"></ul>
+          </article>
+        </div>
+      </section>
+    </section>
+
+    <section class="tdm-assets" id="readmeAssets">
+      <div class="tdm-assets-card tdm-glass-card">
+        <p class="tdm-kicker">Activos opcionales</p>
+        <h2>Qué puedes agregar luego</h2>
+        <div class="tdm-assets-grid">
+          <div>
+            <h3>Screenshots opcionales</h3>
+            <ul>
+              <li>captura-servidor-discord.webp</li>
+              <li>flujo-creacion-personaje.webp</li>
+              <li>json-personaje.webp</li>
+              <li>mockup-batalla.webp</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Enlaces por rellenar</h3>
+            <ul>
+              <li>Repositorio del bot</li>
+              <li>Documento técnico o README largo</li>
+              <li>Demo o video del flujo</li>
+              <li>Proyecto relacionado de Arcane Island</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Notas de integración</h3>
+            <p>
+              El proyecto está hecho para funcionar sin imágenes externas. Si luego añades capturas, se pueden
+              incrustar en el hero o en módulos concretos sin romper el layout.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" data-site-footer>
+    <div class="container footer-content">
+      <p><strong>© 2026 · JCrow</strong> · Portafolio profesional</p>
+      <p>Game Design técnico · Desarrollo · Investigación</p>
+    </div>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/projects/bot-de-discord.js"></script>
+  <script src="../../assets/js/navigation.js"></script>
+</body>
+</html>

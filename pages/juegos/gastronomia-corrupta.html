@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gastronomía Corrupta | Portafolio</title>
+  <meta name="description" content="Proyecto de diseño de videojuegos: Gastronomía Corrupta, metroidvania filosófico sobre cocina, revolución y supervivencia." />
+  <link rel="icon" type="image/gif" href="../../assets/img/icons/bird_anim_01.gif" />
+  <link rel="stylesheet" href="../../assets/css/main.css" />
+  <link rel="stylesheet" href="../../assets/css/projects/gastronomia-corrupta.css" />
+</head>
+<body class="site-layout">
+  <header class="site-header" data-site-header>
+    <div class="container nav-container">
+      <a href="../../index.html" class="logo" aria-label="JCrow, volver al inicio">JCrow</a>
+
+      <nav class="nav-menu" id="navMenu" aria-label="Navegación principal">
+        <a href="../../index.html">Inicio</a>
+        <a href="../about/about.html">Sobre mí</a>
+        <a href="../about/proyectos.html" aria-current="page">Proyectos / Áreas</a>
+        <a href="../analista/analista.html">Análisis de juegos</a>
+        <a href="../../assets/pdf/Hoja_de_vida.pdf" target="_blank" rel="noopener noreferrer">Hoja de vida</a>
+      </nav>
+
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Abrir menú" aria-controls="navMenu" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <main class="gc-page">
+    <aside class="gc-sidebar" aria-label="Índice del proyecto">
+      <div class="gc-sidebar-card">
+        <p class="gc-sidebar-tag">Proyecto</p>
+        <h2>Gastronomía Corrupta</h2>
+        <p>
+          Metroidvania de cocina, guerra y supervivencia. Un mundo donde la comida dejó de ser mesa y se convirtió en estructura, ley y combate.
+        </p>
+      </div>
+
+      <nav class="gc-index" id="gcIndex">
+        <a href="#hero" class="is-active">Portada</a>
+        <a href="#fundamentos">Fundamentos del mundo</a>
+        <a href="#imperios">Imperios gastronómicos</a>
+        <a href="#revolucion">Revolución y filosofía</a>
+        <a href="#pilares">Pilares y técnicas</a>
+        <a href="#ecosistemas">Ecosistemas</a>
+        <a href="#civilizaciones">Civilizaciones</a>
+        <a href="#metroidvania">Estructura metroidvania</a>
+        <a href="#cierre">Cierre del proyecto</a>
+      </nav>
+    </aside>
+
+    <div class="gc-content">
+      <section class="gc-hero gc-section" id="hero" data-section-title="Portada">
+        <div class="gc-hero-copy">
+          <p class="gc-eyebrow">Diseño de Videojuegos · Metroidvania</p>
+          <h1>Gastronomía Corrupta</h1>
+          <p class="gc-lead">
+            Un mundo donde la cocina dejó de ser celebración y se convirtió en estructura de poder. Cada criatura es ingrediente, cada región un bioma culinario, y cada técnica de combate una respuesta a la decadencia del alimento.
+          </p>
+          <div class="gc-hero-actions">
+            <a href="#fundamentos" class="btn btn-primary">Explorar proyecto</a>
+            <a href="#mapa" class="btn btn-secondary">Ir al mapa interactivo</a>
+          </div>
+          <ul class="gc-hero-metrics">
+            <li><strong>8</strong><span>Técnicas base</span></li>
+            <li><strong>5</strong><span>Imperios culinarios</span></li>
+            <li><strong>12</strong><span>Civilizaciones posibles</span></li>
+            <li><strong>8</strong><span>Ecosistemas jugables</span></li>
+          </ul>
+        </div>
+
+        <div class="gc-hero-art" aria-hidden="true">
+          <div class="gc-plate-core">
+            <div class="gc-core-ring"></div>
+            <div class="gc-core-ring gc-core-ring--inner"></div>
+            <div class="gc-core-center">
+              <span>Campo de batalla</span>
+              <strong>Cocina viva</strong>
+            </div>
+          </div>
+          <div class="gc-floating-card gc-floating-card--a">
+            <span>Supervivencia</span>
+            <strong>Tradición</strong>
+          </div>
+          <div class="gc-floating-card gc-floating-card--b">
+            <span>Industria</span>
+            <strong>Corrupción</strong>
+          </div>
+          <div class="gc-floating-card gc-floating-card--c">
+            <span>Rebelión</span>
+            <strong>Sabor</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="gc-map-section gc-section" id="mapa" data-section-title="Mapa interactivo">
+        <div class="gc-section-heading">
+          <p class="gc-section-tag">Mapa del proyecto</p>
+          <h2>Mini mapa interactivo de navegación</h2>
+          <p>
+            Cada nodo representa una parte del diseño. Puedes entrar desde aquí como si fuera una carta de navegación dentro de un metroidvania conceptual.
+          </p>
+        </div>
+
+        <div class="gc-map-layout">
+          <div class="gc-map-panel">
+            <div class="gc-map-grid" id="gcMapGrid" aria-label="Mapa interactivo">
+              <button class="gc-map-node gc-map-node--hero is-active" data-target="hero"><span>01</span><strong>Portada</strong></button>
+              <button class="gc-map-node gc-map-node--fundamentos" data-target="fundamentos"><span>02</span><strong>Fundamentos</strong></button>
+              <button class="gc-map-node gc-map-node--imperios" data-target="imperios"><span>03</span><strong>Imperios</strong></button>
+              <button class="gc-map-node gc-map-node--revolucion" data-target="revolucion"><span>04</span><strong>Revolución</strong></button>
+              <button class="gc-map-node gc-map-node--pilares" data-target="pilares"><span>05</span><strong>Pilares</strong></button>
+              <button class="gc-map-node gc-map-node--ecosistemas" data-target="ecosistemas"><span>06</span><strong>Ecosistemas</strong></button>
+              <button class="gc-map-node gc-map-node--civilizaciones" data-target="civilizaciones"><span>07</span><strong>Civilizaciones</strong></button>
+              <button class="gc-map-node gc-map-node--metroidvania" data-target="metroidvania"><span>08</span><strong>Loop</strong></button>
+              <button class="gc-map-node gc-map-node--cierre" data-target="cierre"><span>09</span><strong>Cierre</strong></button>
+              <svg class="gc-map-lines" viewBox="0 0 1000 700" preserveAspectRatio="none" aria-hidden="true">
+                <path d="M160 120 C 250 120, 280 160, 370 180 S 530 240, 620 220 S 780 150, 870 180" />
+                <path d="M370 180 C 340 300, 340 380, 300 500 S 320 610, 430 610" />
+                <path d="M620 220 C 650 330, 700 420, 760 520" />
+                <path d="M430 610 C 560 620, 650 600, 760 520" />
+              </svg>
+            </div>
+          </div>
+
+          <div class="gc-map-legend">
+            <h3>Nodos del diseño</h3>
+            <p id="gcMapDescription">
+              Selecciona un nodo para saltar directamente a la sección correspondiente y revisar el sistema, el tono filosófico o la estructura jugable.
+            </p>
+            <ul>
+              <li><span class="gc-dot gc-dot--warm"></span> Fundamento y tono del mundo</li>
+              <li><span class="gc-dot gc-dot--sharp"></span> Revolución, conflicto y filosofía</li>
+              <li><span class="gc-dot gc-dot--lush"></span> Ecosistemas, biomas y civilizaciones</li>
+              <li><span class="gc-dot gc-dot--cold"></span> Loop de progresión metroidvania</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="gc-section" id="fundamentos" data-section-title="Fundamentos del mundo">
+        <div class="gc-section-heading">
+          <p class="gc-section-tag">Fundación</p>
+          <h2>Leyes universales de un mundo que gira alrededor de la comida</h2>
+        </div>
+
+        <div class="gc-card-grid gc-card-grid--two">
+          <article class="gc-panel">
+            <h3>Leyes del mundo</h3>
+            <ul class="gc-bullet-list">
+              <li>La materia viva es comestible y forma parte del Gran Ciclo de la Cocina.</li>
+              <li>La comida es ley: religión, política, guerra y ciencia al mismo tiempo.</li>
+              <li>La evolución no apunta a la fuerza, sino a convertirse en plato, ingrediente o técnica.</li>
+              <li>La supervivencia depende de cocinar, cosechar, cazar o sacrificar algo valioso.</li>
+            </ul>
+          </article>
+
+          <article class="gc-panel gc-panel--quote">
+            <p>“¿Qué estás dispuesto a cocinar, consumir o sacrificar para que tu civilización sobreviva?”</p>
+          </article>
+        </div>
+
+        <div class="gc-system-strip" id="gcLawStrip"></div>
+      </section>
+
+      <section class="gc-section" id="imperios" data-section-title="Imperios gastronómicos">
+        <div class="gc-section-heading">
+          <p class="gc-section-tag">Estructura civilizacional</p>
+          <h2>Los cinco grandes imperios gastronómicos</h2>
+          <p>
+            Cada imperio expresa una cocina, una idea del mundo y una tensión histórica reinterpretada como estructura de poder culinario.
+          </p>
+        </div>
+
+        <div class="gc-empire-grid" id="gcEmpireGrid"></div>
+      </section>
+
+      <section class="gc-section" id="revolucion" data-section-title="Revolución y filosofía">
+        <div class="gc-section-heading">
+          <p class="gc-section-tag">Conflicto central</p>
+          <h2>Revolución, alienación y batalla por el derecho a cocinar</h2>
+        </div>
+
+        <div class="gc-card-grid gc-card-grid--two">
+          <article class="gc-panel">
+            <h3>La pregunta filosófica</h3>
+            <p>
+              Cocinar dejó de ser un acto de comunidad y pasó a ser una obligación mediada por el trabajo, el mercado, la autoridad y la producción masiva. Aquí la cocina cuestiona la libertad, la identidad y el precio de vivir.
+            </p>
+            <div class="gc-philosophy-tags">
+              <span>Marxismo</span>
+              <span>Existencialismo</span>
+              <span>Anarquismo</span>
+              <span>Nietzscheanismo</span>
+              <span>Estructuralismo</span>
+              <span>Utilitarismo</span>
+            </div>
+          </article>
+
+          <article class="gc-panel">
+            <h3>Contraste principal</h3>
+            <table class="gc-contrast-table">
+              <thead>
+                <tr>
+                  <th>Cocina tradicional</th>
+                  <th>Sociedad moderna</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Se cocina para vivir y compartir.</td>
+                  <td>Se produce para vender, controlar y sobrevivir económicamente.</td>
+                </tr>
+                <tr>
+                  <td>Conexión directa con el alimento.</td>
+                  <td>Alienación del alimento y del trabajo.</td>
+                </tr>
+                <tr>
+                  <td>El valor está en el acto.</td>
+                  <td>El valor está en la eficiencia y el costo.</td>
+                </tr>
+              </tbody>
+            </table>
+          </article>
+        </div>
+
+        <div class="gc-timeline" id="gcRevolutionTimeline"></div>
+      </section>
+
+      <section class="gc-section" id="pilares" data-section-title="Pilares y técnicas">
+        <div class="gc-section-heading">
+          <p class="gc-section-tag">Técnicas de combate</p>
+          <h2>Ocho pilares culinarios como árboles de combate y estilo</h2>
+          <p>
+            Cada estilo funciona como una escuela de combate, con arma, tono visual, filosofía y criatura invocada. Son la base del crecimiento del jugador y de la identidad jugable del metroidvania.
+          </p>
+        </div>
+
+        <div class="gc-technique-layout">
+          <div class="gc-technique-list" id="gcTechniqueList"></div>
+          <div class="gc-technique-display" id="gcTechniqueDisplay">
+            <div class="gc-technique-art" id="gcTechniqueArt" aria-hidden="true"></div>
+            <div class="gc-technique-copy">
+              <p class="gc-technique-kicker" id="gcTechniqueKicker">Instantáneos</p>
+              <h3 id="gcTechniqueTitle">Velocidad extrema y adaptación</h3>
+              <p id="gcTechniqueBody"></p>
+              <ul class="gc-technique-meta">
+                <li><strong>Arma:</strong> <span id="gcTechniqueWeapon"></span></li>
+                <li><strong>Invocación:</strong> <span id="gcTechniqueSummon"></span></li>
+                <li><strong>Tono visual:</strong> <span id="gcTechniqueVisual"></span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="gc-section" id="ecosistemas" data-section-title="Ecosistemas">
+        <div class="gc-section-heading">
+          <p class="gc-section-tag">Biomas jugables</p>
+          <h2>Ecosistemas gastronómicos como mapa del metroidvania</h2>
+          <p>
+            Cada zona es un ecosistema comestible con biomas, recursos, enemigos y reglas de exploración propias. El mapa se expande por llaves culinarias, técnicas nuevas y control de movilidad.
+          </p>
+        </div>
+
+        <div class="gc-ecosystem-grid" id="gcEcosystemGrid"></div>
+      </section>
+
+      <section class="gc-section" id="civilizaciones" data-section-title="Civilizaciones">
+        <div class="gc-section-heading">
+          <p class="gc-section-tag">Facciones</p>
+          <h2>Civilizaciones nacidas de estilos de cocina y formas de vida</h2>
+        </div>
+
+        <div class="gc-civilizations-track" id="gcCivilizationTrack"></div>
+      </section>
+
+      <section class="gc-section" id="metroidvania" data-section-title="Loop metroidvania">
+        <div class="gc-section-heading">
+          <p class="gc-section-tag">Diseño jugable</p>
+          <h2>Loop de progresión metroidvania</h2>
+          <p>
+            La exploración, la cocina, la pérdida de ingredientes y el dominio de técnicas se enlazan en un ciclo de aprendizaje duro, lectura de patrones y reapertura de rutas.
+          </p>
+        </div>
+
+        <div class="gc-loop-grid">
+          <article class="gc-panel">
+            <h3>Explorar</h3>
+            <p>El jugador recorre biomas culinarios, descubre criaturas comestibles, secretos de recetas y caminos bloqueados por técnicas.</p>
+          </article>
+          <article class="gc-panel">
+            <h3>Cazar o cosechar</h3>
+            <p>Las criaturas y materiales se obtienen del entorno. La pérdida al morir afecta ingredientes valiosos, no experiencia.</p>
+          </article>
+          <article class="gc-panel">
+            <h3>Cocinar y forjar</h3>
+            <p>Los enemigos se transforman en platos, moneda, reputación o equipamiento orgánico hecho con huesos, fibras, caramelización y conchas.</p>
+          </article>
+          <article class="gc-panel">
+            <h3>Volver a abrir rutas</h3>
+            <p>Las técnicas dominadas permiten regresar a zonas previas y reinterpretarlas con nuevas herramientas, atajos o jefes opcionales.</p>
+          </article>
+        </div>
+
+        <div class="gc-loop-line" id="gcLoopLine"></div>
+      </section>
+
+      <section class="gc-section" id="cierre" data-section-title="Cierre del proyecto">
+        <div class="gc-section-heading">
+          <p class="gc-section-tag">Conclusión</p>
+          <h2>Un metroidvania donde el alimento es estructura, memoria y conflicto</h2>
+        </div>
+
+        <div class="gc-card-grid gc-card-grid--two">
+          <article class="gc-panel">
+            <h3>Lo que vuelve único al proyecto</h3>
+            <ul class="gc-bullet-list">
+              <li>Combina metroidvania, filosofía política y guerra culinaria.</li>
+              <li>Usa la cocina como religión, ciencia, economía y violencia.</li>
+              <li>Convierte ingredientes, platos y técnicas en progreso real de combate.</li>
+              <li>Permite construir facciones, biomas y enemigos con gran identidad visual.</li>
+            </ul>
+          </article>
+
+          <article class="gc-panel gc-panel--quote">
+            <p>“La cocina ya no es solo un arte: es el campo de batalla donde la libertad, la tiranía y la existencia misma se cuecen a fuego lento.”</p>
+          </article>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer" data-site-footer>
+    <div class="container footer-content">
+      <p><strong>© 2026 · JCrow</strong> · Portafolio profesional</p>
+      <p>Game Design técnico · Desarrollo · Investigación</p>
+    </div>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/projects/gastronomia-corrupta.js"></script>
+  <script src="../../assets/js/navigation.js"></script>
+</body>
+</html>

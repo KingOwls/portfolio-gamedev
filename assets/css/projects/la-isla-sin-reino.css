@@ -1,0 +1,872 @@
+/* ===== LA ISLA SIN REINO ===== */
+:root {
+  --mmo-bg: #071019;
+  --mmo-surface: rgba(14, 24, 40, 0.86);
+  --mmo-surface-soft: rgba(19, 31, 53, 0.74);
+  --mmo-surface-strong: rgba(13, 22, 36, 0.95);
+  --mmo-text: #f3f7ff;
+  --mmo-muted: #b8c7de;
+  --mmo-gold: #d6b25c;
+  --mmo-cyan: #67bfdc;
+  --mmo-violet: #7d73d4;
+  --mmo-red: #df6a78;
+  --mmo-border: rgba(255, 255, 255, 0.08);
+  --mmo-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
+  --mmo-radius: 28px;
+}
+
+.mmo-project-body {
+  background:
+    radial-gradient(circle at top, rgba(103, 191, 220, 0.14), transparent 24%),
+    linear-gradient(180deg, #061019 0%, #091320 55%, #071119 100%);
+  color: var(--mmo-text);
+}
+
+.mmo-book-page {
+  width: min(100%, 1680px);
+  margin: 0 auto;
+  padding: 2rem clamp(1rem, 2vw, 1.8rem) 4rem;
+  display: grid;
+  grid-template-columns: 320px minmax(0, 1fr);
+  gap: 1.4rem;
+}
+
+.mmo-index-panel,
+.mmo-book-shell {
+  position: relative;
+  background: linear-gradient(180deg, rgba(12, 20, 36, 0.92), rgba(10, 17, 28, 0.88));
+  border: 1px solid var(--mmo-border);
+  border-radius: var(--mmo-radius);
+  box-shadow: var(--mmo-shadow);
+  backdrop-filter: blur(10px);
+}
+
+.mmo-index-panel {
+  padding: 1rem;
+  display: grid;
+  gap: 1rem;
+  align-content: start;
+  min-height: calc(100vh - 10rem);
+  position: sticky;
+  top: 5.5rem;
+}
+
+.mmo-index-card,
+.mmo-index-footer {
+  padding: 1rem;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.mmo-index-card h1 {
+  font-size: clamp(1.8rem, 2vw, 2.4rem);
+  line-height: 1.02;
+  margin: 0 0 0.75rem;
+}
+
+.mmo-index-text {
+  color: var(--mmo-muted);
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.mmo-index-actions {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.mmo-index-nav {
+  display: grid;
+  gap: 0.45rem;
+  max-height: 52vh;
+  overflow: auto;
+  padding-right: 0.2rem;
+}
+
+.mmo-index-item {
+  width: 100%;
+  text-align: left;
+  padding: 0.8rem 0.95rem;
+  border-radius: 16px;
+  border: 1px solid transparent;
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--mmo-muted);
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.mmo-index-item:hover,
+.mmo-index-item.is-active {
+  background: rgba(214, 178, 92, 0.12);
+  color: var(--mmo-text);
+  border-color: rgba(214, 178, 92, 0.28);
+}
+
+.mmo-page-controls {
+  display: flex;
+  gap: 0.6rem;
+  margin-top: 0.85rem;
+}
+
+.mmo-page-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  border: 1px solid var(--mmo-border);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--mmo-text);
+  cursor: pointer;
+}
+
+.mmo-book-shell {
+  overflow: hidden;
+  min-height: calc(100vh - 10rem);
+}
+
+.mmo-book-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.15rem;
+  border-bottom: 1px solid var(--mmo-border);
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.mmo-topbar-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-weight: 700;
+}
+
+.mmo-topbar-badge span:first-child {
+  min-width: 2.2rem;
+  height: 2.2rem;
+  display: inline-grid;
+  place-items: center;
+  border-radius: 999px;
+  background: rgba(214, 178, 92, 0.14);
+  color: var(--mmo-gold);
+  border: 1px solid rgba(214, 178, 92, 0.2);
+}
+
+.mmo-dot-track {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  justify-content: flex-end;
+}
+
+.mmo-dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.mmo-dot.is-active {
+  background: var(--mmo-gold);
+  border-color: rgba(214, 178, 92, 0.25);
+  transform: scale(1.12);
+}
+
+.mmo-book-viewer {
+  position: relative;
+  min-height: calc(100vh - 15rem);
+  overflow: hidden;
+}
+
+.module-page {
+  position: absolute;
+  inset: 0;
+  padding: 1.15rem;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(10%) rotateY(-10deg) scale(0.98);
+  transform-origin: left center;
+  transition: transform 0.65s cubic-bezier(.22,.61,.36,1), opacity 0.35s ease;
+  overflow: auto;
+}
+
+.module-page.is-active {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(0) rotateY(0deg) scale(1);
+}
+
+.module-page.is-leaving-left {
+  opacity: 0;
+  transform: translateX(-10%) rotateY(12deg) scale(0.985);
+  transform-origin: right center;
+}
+
+.module-page.is-leaving-right {
+  opacity: 0;
+  transform: translateX(10%) rotateY(-12deg) scale(0.985);
+  transform-origin: left center;
+}
+
+.module-grid,
+.module-split {
+  display: grid;
+  gap: 1rem;
+}
+
+.module-grid--hero {
+  grid-template-columns: minmax(380px, 1.05fr) minmax(360px, 0.95fr);
+  align-items: center;
+  min-height: 100%;
+}
+
+.module-copy {
+  display: grid;
+  gap: 1rem;
+  align-content: start;
+}
+
+.module-copy--wide {
+  margin-bottom: 1rem;
+}
+
+.module-kicker {
+  margin: 0;
+  color: var(--mmo-gold);
+  font-size: 0.85rem;
+  letter-spacing: 0.14em;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.module-copy h2 {
+  margin: 0;
+  font-size: clamp(2.1rem, 3vw, 3.6rem);
+  line-height: 1.02;
+  max-width: 16ch;
+}
+
+.module-copy--wide h2 {
+  max-width: 24ch;
+}
+
+.module-copy p {
+  color: var(--mmo-muted);
+  line-height: 1.78;
+  margin: 0;
+}
+
+.module-actions {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.module-actions .btn.is-disabled,
+.resource-link.is-disabled {
+  opacity: 0.45;
+  pointer-events: none;
+}
+
+.module-visual,
+.panel {
+  position: relative;
+  background: linear-gradient(180deg, var(--mmo-surface), var(--mmo-surface-soft));
+  border: 1px solid var(--mmo-border);
+  border-radius: 24px;
+  padding: 1rem;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.02);
+}
+
+.graphic-note {
+  margin-top: 0.8rem;
+  color: var(--mmo-muted);
+  font-size: 0.92rem;
+}
+
+.metric-row {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.8rem;
+}
+
+.metric-card {
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid var(--mmo-border);
+  border-radius: 18px;
+  text-align: center;
+}
+
+.metric-card strong {
+  display: block;
+  font-size: 1.35rem;
+  color: var(--mmo-gold);
+}
+
+.metric-card span {
+  color: var(--mmo-muted);
+  font-size: 0.92rem;
+}
+
+/* HERO SCENE */
+.hero-scene {
+  position: relative;
+  min-height: 420px;
+  overflow: hidden;
+  border-radius: 22px;
+  background: linear-gradient(180deg, rgba(10, 17, 31, 0.9), rgba(9, 20, 37, 0.98));
+}
+
+.hero-sky,
+.hero-ocean,
+.hero-island,
+.hero-train-track,
+.hero-train,
+.hero-moon {
+  position: absolute;
+}
+
+.hero-sky {
+  inset: 0;
+  background:
+    radial-gradient(circle at 65% 18%, rgba(255, 245, 200, 0.12), transparent 16%),
+    linear-gradient(180deg, rgba(34, 56, 93, 0.92), rgba(7, 13, 24, 0.95));
+}
+
+.hero-moon {
+  width: 92px;
+  height: 92px;
+  top: 2rem;
+  right: 2rem;
+  border-radius: 999px;
+  background: radial-gradient(circle at 35% 35%, rgba(255,255,255,0.9), rgba(214,178,92,0.3));
+  box-shadow: 0 0 45px rgba(214, 178, 92, 0.15);
+}
+
+.hero-ocean {
+  left: -10%;
+  right: -10%;
+  bottom: 0;
+  height: 44%;
+  background:
+    linear-gradient(180deg, rgba(31, 101, 128, 0.45), rgba(8, 24, 38, 0.95)),
+    repeating-linear-gradient(90deg, rgba(255,255,255,0.04), rgba(255,255,255,0.04) 2px, transparent 2px, transparent 28px);
+  clip-path: polygon(0 12%, 100% 0, 100% 100%, 0 100%);
+}
+
+.hero-island {
+  left: 20%;
+  right: 16%;
+  bottom: 24%;
+  height: 32%;
+  background:
+    radial-gradient(circle at 50% 30%, rgba(31, 74, 52, 0.85), rgba(13, 26, 20, 0.94)),
+    linear-gradient(180deg, rgba(41, 58, 47, 0.9), rgba(8, 16, 12, 0.98));
+  clip-path: polygon(4% 100%, 12% 60%, 22% 44%, 32% 18%, 52% 0, 68% 22%, 78% 38%, 88% 58%, 96% 100%);
+  filter: drop-shadow(0 18px 30px rgba(0,0,0,0.25));
+}
+
+.hero-train-track {
+  left: 8%;
+  right: 8%;
+  bottom: 16%;
+  height: 14px;
+  border-radius: 999px;
+  background:
+    repeating-linear-gradient(90deg, rgba(214,178,92,0.22), rgba(214,178,92,0.22) 18px, transparent 18px, transparent 34px),
+    linear-gradient(90deg, rgba(146,103,48,0.7), rgba(92,70,42,0.6));
+}
+
+.hero-train {
+  left: -180px;
+  bottom: 18%;
+  display: flex;
+  gap: 10px;
+  animation: trainRide 18s linear infinite;
+}
+
+.train-engine,
+.train-wagon {
+  display: block;
+  border-radius: 12px 12px 8px 8px;
+  background: linear-gradient(180deg, rgba(214,178,92,0.92), rgba(112,73,35,0.95));
+  border: 1px solid rgba(255,255,255,0.12);
+  position: relative;
+}
+
+.train-engine {
+  width: 96px;
+  height: 48px;
+}
+
+.train-wagon {
+  width: 76px;
+  height: 40px;
+  margin-top: 8px;
+}
+
+.train-engine::before,
+.train-wagon::before {
+  content: "";
+  position: absolute;
+  inset: 8px 12px auto;
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(7, 16, 24, 0.35);
+}
+
+@keyframes trainRide {
+  from { transform: translateX(0); }
+  to { transform: translateX(calc(100vw + 420px)); }
+}
+
+.zone-card-grid,
+.pet-grid,
+.profession-grid,
+.dungeon-mode-grid,
+.policy-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.8rem;
+}
+
+.zone-card,
+.pet-card,
+.profession-card,
+.dungeon-card,
+.policy-card {
+  padding: 0.95rem;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid var(--mmo-border);
+}
+
+.zone-card h3,
+.pet-card h3,
+.profession-card h3,
+.dungeon-card h3,
+.policy-card h3,
+.mini-section h3 {
+  margin: 0 0 0.55rem;
+  font-size: 1rem;
+}
+
+.zone-card p,
+.pet-card p,
+.profession-card p,
+.dungeon-card p,
+.policy-card p,
+.mini-section p,
+.info-list,
+.info-list li {
+  color: var(--mmo-muted);
+  line-height: 1.65;
+}
+
+.zone-card .zone-pill,
+.pet-card .zone-pill,
+.dungeon-card .zone-pill {
+  display: inline-flex;
+  margin-top: 0.55rem;
+  padding: 0.35rem 0.65rem;
+  border-radius: 999px;
+  background: rgba(214, 178, 92, 0.12);
+  color: var(--mmo-gold);
+  border: 1px solid rgba(214, 178, 92, 0.16);
+  font-size: 0.82rem;
+}
+
+.world-map,
+.diagram-shell,
+.loop-diagram,
+.economy-flow,
+.compliance-board,
+.mvp-checklist,
+.pet-utility-board,
+.battle-arena,
+.battle-sidebar,
+.ui-preview,
+.ability-builder {
+  min-height: 380px;
+}
+
+.world-map svg,
+.diagram-shell svg,
+.loop-diagram svg,
+.economy-flow svg,
+.compliance-board svg,
+.battle-arena svg,
+.battle-sidebar svg,
+.ui-preview svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.module-split {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+}
+
+.module-split--character {
+  grid-template-columns: 320px minmax(0, 1fr);
+}
+
+.character-list {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.character-chip {
+  padding: 0.9rem;
+  border-radius: 16px;
+  border: 1px solid var(--mmo-border);
+  background: rgba(255, 255, 255, 0.035);
+  text-align: left;
+  color: var(--mmo-text);
+  cursor: pointer;
+}
+
+.character-chip.is-active {
+  border-color: rgba(214, 178, 92, 0.28);
+  background: rgba(214, 178, 92, 0.12);
+}
+
+.character-chip small {
+  display: block;
+  color: var(--mmo-muted);
+  margin-top: 0.25rem;
+}
+
+.character-dossier {
+  min-height: 420px;
+  display: grid;
+  grid-template-columns: 260px minmax(0, 1fr);
+  gap: 1rem;
+}
+
+.dossier-portrait {
+  border-radius: 20px;
+  border: 1px solid var(--mmo-border);
+  background:
+    radial-gradient(circle at 50% 24%, rgba(214,178,92,0.18), transparent 26%),
+    linear-gradient(180deg, rgba(25, 39, 63, 0.92), rgba(8, 16, 28, 0.98));
+  padding: 1rem;
+  display: grid;
+  place-items: center;
+}
+
+.dossier-portrait .silhouette {
+  width: 140px;
+  height: 230px;
+  background:
+    radial-gradient(circle at 50% 15%, rgba(255,255,255,0.9), rgba(255,255,255,0.22) 28%, transparent 29%),
+    linear-gradient(180deg, rgba(214,178,92,0.82), rgba(71,111,130,0.8));
+  clip-path: polygon(50% 0, 68% 8%, 76% 20%, 74% 35%, 66% 48%, 72% 78%, 58% 100%, 42% 100%, 28% 78%, 34% 48%, 26% 35%, 24% 20%, 32% 8%);
+  filter: drop-shadow(0 18px 28px rgba(0,0,0,0.28));
+}
+
+.dossier-details {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.dossier-head h3 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.dossier-head p,
+.tree-card p,
+.trait-line {
+  color: var(--mmo-muted);
+  line-height: 1.65;
+}
+
+.tree-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.7rem;
+}
+
+.tree-card {
+  padding: 0.85rem;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--mmo-border);
+}
+
+.tree-card strong {
+  color: var(--mmo-gold);
+}
+
+.interface-tabs {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.interface-tab {
+  padding: 0.85rem 0.95rem;
+  border-radius: 16px;
+  border: 1px solid var(--mmo-border);
+  background: rgba(255, 255, 255, 0.035);
+  text-align: left;
+  color: var(--mmo-text);
+  cursor: pointer;
+}
+
+.interface-tab.is-active {
+  border-color: rgba(214, 178, 92, 0.28);
+  background: rgba(214, 178, 92, 0.12);
+}
+
+.choice-stack {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.choice-card {
+  padding: 0.8rem;
+  border-radius: 16px;
+  border: 1px solid var(--mmo-border);
+  background: rgba(255,255,255,0.04);
+}
+
+.choice-card strong {
+  display: block;
+  margin-bottom: 0.35rem;
+}
+
+.battle-menu {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.55rem;
+  margin-top: 1rem;
+}
+
+.battle-action {
+  padding: 0.65rem 0.7rem;
+  text-align: center;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--mmo-border);
+  color: var(--mmo-text);
+}
+
+.keyword-filter-bar {
+  display: flex;
+  gap: 0.55rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.8rem;
+}
+
+.keyword-filter {
+  padding: 0.5rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid var(--mmo-border);
+  background: rgba(255, 255, 255, 0.035);
+  color: var(--mmo-text);
+  cursor: pointer;
+}
+
+.keyword-filter.is-active {
+  background: rgba(214, 178, 92, 0.12);
+  border-color: rgba(214,178,92,0.2);
+}
+
+.keyword-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.7rem;
+}
+
+.keyword-card {
+  padding: 0.8rem;
+  border-radius: 16px;
+  border: 1px solid var(--mmo-border);
+  background: rgba(255,255,255,0.04);
+}
+
+.keyword-card strong {
+  display: block;
+  margin-bottom: 0.25rem;
+  color: var(--mmo-gold);
+}
+
+.ability-builder {
+  display: grid;
+  gap: 0.85rem;
+  align-content: start;
+}
+
+.builder-line {
+  padding: 0.95rem;
+  border-radius: 18px;
+  border: 1px solid var(--mmo-border);
+  background: rgba(255,255,255,0.04);
+}
+
+.builder-line .builder-word {
+  display: inline-block;
+  margin: 0.2rem 0.35rem 0 0;
+  padding: 0.35rem 0.65rem;
+  border-radius: 999px;
+  background: rgba(103,191,220,0.12);
+  color: var(--mmo-cyan);
+  border: 1px solid rgba(103,191,220,0.14);
+}
+
+.roadmap-track {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 0.8rem;
+}
+
+.roadmap-card {
+  padding: 1rem;
+  border-radius: 18px;
+  border: 1px solid var(--mmo-border);
+  background: rgba(255,255,255,0.04);
+  min-height: 220px;
+}
+
+.roadmap-card strong {
+  display: block;
+  color: var(--mmo-gold);
+  margin-bottom: 0.55rem;
+}
+
+.mvp-room-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.8rem;
+}
+
+.mvp-room {
+  padding: 0.95rem;
+  border-radius: 18px;
+  border: 1px solid var(--mmo-border);
+  background: rgba(255,255,255,0.04);
+}
+
+.resource-list {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.resource-card {
+  padding: 0.95rem;
+  border-radius: 18px;
+  border: 1px solid var(--mmo-border);
+  background: rgba(255,255,255,0.04);
+}
+
+.resource-card h3 {
+  margin: 0 0 0.35rem;
+}
+
+.resource-link {
+  display: inline-flex;
+  margin-top: 0.65rem;
+  color: var(--mmo-gold);
+}
+
+.panel--full {
+  padding: 1rem;
+}
+
+.info-list {
+  padding-left: 1.1rem;
+  margin: 0;
+}
+
+@media (max-width: 1280px) {
+  .mmo-book-page {
+    grid-template-columns: 280px minmax(0, 1fr);
+  }
+
+  .module-grid--hero,
+  .module-split,
+  .module-split--character,
+  .character-dossier {
+    grid-template-columns: 1fr;
+  }
+
+  .keyword-grid,
+  .roadmap-track {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 980px) {
+  .mmo-book-page {
+    grid-template-columns: 1fr;
+  }
+
+  .mmo-index-panel {
+    position: relative;
+    top: auto;
+    min-height: auto;
+  }
+
+  .mmo-book-shell {
+    min-height: auto;
+  }
+
+  .module-page {
+    position: relative;
+    inset: auto;
+    display: none;
+    min-height: 76vh;
+  }
+
+  .module-page.is-active {
+    display: block;
+  }
+
+  .mmo-book-viewer {
+    min-height: auto;
+  }
+
+  .metric-row,
+  .zone-card-grid,
+  .pet-grid,
+  .profession-grid,
+  .dungeon-mode-grid,
+  .policy-cards,
+  .mvp-room-grid,
+  .keyword-grid,
+  .roadmap-track {
+    grid-template-columns: 1fr;
+  }
+
+  .battle-menu {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .mmo-book-page {
+    padding-inline: 0.85rem;
+  }
+
+  .module-copy h2 {
+    font-size: clamp(1.8rem, 8vw, 2.7rem);
+  }
+
+  .mmo-book-topbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .mmo-dot-track {
+    justify-content: flex-start;
+  }
+
+  .battle-menu {
+    grid-template-columns: 1fr;
+  }
+}

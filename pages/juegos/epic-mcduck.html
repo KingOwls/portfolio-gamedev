@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Epic McDuck | Portafolio</title>
+  <meta name="description" content="Propuesta de aventura 3D inspirada en el legado, la exploración y un bastón multiusos." />
+  <link rel="icon" type="image/gif" href="../../assets/img/icons/bird_anim_01.gif" />
+  <link rel="stylesheet" href="../../assets/css/main.css" />
+  <link rel="stylesheet" href="../../assets/css/projects/epic-mcduck.css" />
+</head>
+<body class="site-layout">
+  <header class="site-header" data-site-header>
+    <div class="container nav-container">
+      <a href="../../index.html" class="logo" aria-label="JCrow, volver al inicio">JCrow</a>
+
+      <nav class="nav-menu" id="navMenu" aria-label="Navegación principal">
+        <a href="../../index.html">Inicio</a>
+        <a href="../about/about.html">Sobre mí</a>
+        <a href="../about/proyectos.html" aria-current="page">Proyectos / Áreas</a>
+        <a href="../analista/analista.html">Análisis de juegos</a>
+        <a href="../../assets/pdf/Hoja_de_vida.pdf" target="_blank" rel="noopener noreferrer">Hoja de vida</a>
+      </nav>
+
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Abrir menú" aria-controls="navMenu" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <main class="em-page">
+    <section class="em-hero">
+      <div class="container em-hero-grid">
+        <div class="em-hero-copy">
+          <p class="em-kicker">Diseño de videojuegos • Aventura 3D</p>
+          <h1>Epic McDuck</h1>
+          <p class="em-subtitle">
+            Un proyecto que mezcla la vibra aventurera de un magnate explorador, el humor
+            de los platformers clásicos y una línea filosófica sobre legado, memoria y
+            el valor de lo que se deja atrás.
+          </p>
+          <p>
+            La navegación no baja como una página común: cada capítulo funciona como un
+            vagón o estación de progreso, y el recorrido avanza horizontalmente como si
+            el personaje atravesara un gran mapa de plataformas.
+          </p>
+
+          <div class="em-hero-actions">
+            <a class="btn btn-primary" href="#epicJourney">Explorar propuesta</a>
+            <a class="btn btn-secondary" href="#epicAssets">Activos requeridos</a>
+          </div>
+        </div>
+
+        <aside class="em-hero-aside">
+          <div class="em-pill">Proyecto conceptual</div>
+          <ul class="em-bullets">
+            <li>Plataformas 3D semiabiertas</li>
+            <li>Bastón multiusos como eje jugable</li>
+            <li>Rival cuervo con tensión política y cultural</li>
+            <li>Mundos que representan conflictos del legado</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section class="em-journey" id="epicJourney" aria-label="Recorrido del proyecto Epic McDuck">
+      <div class="container">
+        <div class="em-journey-topbar">
+          <div>
+            <p class="em-kicker">Recorrido horizontal</p>
+            <h2>Barra de progreso del proyecto</h2>
+          </div>
+
+          <div class="em-nav-actions">
+            <button type="button" class="em-nav-btn" id="epicPrevBtn" aria-label="Sección anterior">←</button>
+            <button type="button" class="em-nav-btn" id="epicNextBtn" aria-label="Siguiente sección">→</button>
+          </div>
+        </div>
+
+        <div class="em-progress-shell">
+          <div class="em-progress-line"></div>
+          <div class="em-progress-stops" id="epicStops"></div>
+          <div class="em-walker" id="epicWalker" aria-hidden="true">
+            <div class="em-walker-body">
+              <span class="em-walker-head"></span>
+              <span class="em-walker-cane"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="em-stage-meta">
+          <strong id="epicStageLabel">01 · Concepto</strong>
+          <span id="epicStageHint">Usa flechas, click o la rueda del ratón para moverte entre estaciones.</span>
+        </div>
+
+        <div class="em-chapters" id="epicChapters">
+          <div class="em-chapters-track" id="epicTrack">
+            <article class="em-panel em-panel--hero-stage" data-stage="concepto">
+              <div class="em-panel-copy">
+                <p class="em-panel-kicker">01 · Concepto</p>
+                <h3>Un platformer 3D de aventura, tesoros y legado</h3>
+                <p>
+                  Epic McDuck nace tomando inspiración en la exploración creativa, el
+                  plataformeo con herramientas y el ritmo de aventuras cartoon clásicas.
+                  La propuesta gira alrededor de un millonario explorador que recibe una
+                  carta olvidada sobre la Cámara del Eco Eterno, un lugar donde se
+                  registran los logros y fracasos de los grandes linajes.
+                </p>
+                <p>
+                  Para llegar allí, debe reunir los Fragmentos del Legado mientras un
+                  cuervo aristócrata británico intenta controlar la memoria histórica a su
+                  favor.
+                </p>
+
+                <div class="em-motto">
+                  <span>Frase eje</span>
+                  <strong>“El oro se funde. La historia permanece.”</strong>
+                </div>
+              </div>
+
+              <div class="em-concept-visual">
+                <div class="em-coin-vault"></div>
+                <div class="em-letter-card">
+                  <p class="em-letter-title">La llamada del legado</p>
+                  <p>
+                    Documento antiguo, sello del clan y mapa incompleto hacia la Cámara
+                    del Eco Eterno.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="em-panel" data-stage="protagonista">
+              <div class="em-panel-header">
+                <p class="em-panel-kicker">02 · Protagonista</p>
+                <h3>El magnate aventurero</h3>
+              </div>
+
+              <div class="em-character-sheet">
+                <div class="em-character-art">
+                  <img src="../../assets/img/projects/epic-mcduck/characters/hero-mcduck.svg" alt="Render del protagonista aventurero" />
+                  <div class="em-character-placeholder">COLOCA PNG DEL HÉROE</div>
+                </div>
+
+                <div class="em-character-data">
+                  <div class="em-data-card">
+                    <span>Nombre</span>
+                    <strong>Tío Rico McPato / Explorador del clan</strong>
+                  </div>
+                  <div class="em-data-card">
+                    <span>Arquetipo</span>
+                    <strong>Magnate, aventurero, autodidacta</strong>
+                  </div>
+                  <div class="em-data-card">
+                    <span>Motivación</span>
+                    <strong>Descubrir qué significa realmente su legado</strong>
+                  </div>
+                  <div class="em-data-card">
+                    <span>Pilares</span>
+                    <strong>Ambición, ingenio, familia y memoria</strong>
+                  </div>
+                </div>
+              </div>
+
+              <div class="em-tag-row">
+                <span>Pogo bastón</span>
+                <span>Exploración 3D</span>
+                <span>Humor clásico</span>
+                <span>Ruta de tesoros</span>
+              </div>
+            </article>
+
+            <article class="em-panel" data-stage="corvin">
+              <div class="em-panel-header">
+                <p class="em-panel-kicker">03 · Rival / compañero</p>
+                <h3>Lord Corvin Thornsworth</h3>
+              </div>
+
+              <div class="em-dual-layout">
+                <div class="em-character-art em-character-art--rival">
+                  <img src="../../assets/img/projects/epic-mcduck/characters/corvin-thornsworth.svg" alt="Render de Lord Corvin Thornsworth" />
+                  <div class="em-character-placeholder">COLOCA PNG DE CORVIN</div>
+                </div>
+
+                <div class="em-rival-dossier">
+                  <p>
+                    Aristócrata británico, cazador burocrático, vanidoso y preciso. Su
+                    familia, los Condes Ermitaños, sirve a la Corona desde la sombra como
+                    mediadores, espías y solucionadores de conflictos.
+                  </p>
+
+                  <ul class="em-feature-list">
+                    <li><strong>Rivalidad:</strong> tensión nacional y cultural con el clan McPato.</li>
+                    <li><strong>Admiración amarga:</strong> desprecia el desorden del héroe, pero admira que se haya hecho solo.</li>
+                    <li><strong>Arco:</strong> obedecer a su linaje o encontrar su propio criterio.</li>
+                    <li><strong>Estética:</strong> sombrero alto, gabán oscuro, monóculo y bastón-espada.</li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+
+            <article class="em-panel" data-stage="mundos">
+              <div class="em-panel-header">
+                <p class="em-panel-kicker">04 · Mundos</p>
+                <h3>Seis escenarios para construir el legado</h3>
+              </div>
+
+              <div class="em-world-grid">
+                <article class="em-world-card em-world-card--ruinas">
+                  <h4>Minas de MacRuinas</h4>
+                  <p>Tradición, ruinas del clan y plataformeo vertical con lianas.</p>
+                </article>
+                <article class="em-world-card em-world-card--biblioteca">
+                  <h4>Biblioteca del Tiempo Perdido</h4>
+                  <p>Libros suspendidos, puzzles narrativos y mecánicas temporales.</p>
+                </article>
+                <article class="em-world-card em-world-card--espejismos">
+                  <h4>Mercado de Espejismos</h4>
+                  <p>Oro falso, deseo, renuncia y trampas sobre la avaricia.</p>
+                </article>
+                <article class="em-world-card em-world-card--inventores">
+                  <h4>Cementerio de Inventores</h4>
+                  <p>Steampunk abandonado, autómatas y orgullo tecnológico.</p>
+                </article>
+                <article class="em-world-card em-world-card--torre">
+                  <h4>Torre del Cuervo</h4>
+                  <p>Mansión vertical, control, deber y duelos con Corvin.</p>
+                </article>
+                <article class="em-world-card em-world-card--eco">
+                  <h4>Cámara del Eco Eterno</h4>
+                  <p>El cierre filosófico donde el legado se define.</p>
+                </article>
+              </div>
+            </article>
+
+            <article class="em-panel" data-stage="baston">
+              <div class="em-panel-header">
+                <p class="em-panel-kicker">05 · Eje mecánico</p>
+                <h3>Bastón multiusos y movilidad estilo Mario 64</h3>
+              </div>
+
+              <div class="em-ability-grid">
+                <article class="em-ability-card">
+                  <h4>Pogo bastón</h4>
+                  <p>Rebote sobre enemigos, botones, pinchos y plataformas reactivas.</p>
+                </article>
+                <article class="em-ability-card">
+                  <h4>Gancho-liana</h4>
+                  <p>Balanceo entre argollas, rutas secretas y navegación vertical.</p>
+                </article>
+                <article class="em-ability-card">
+                  <h4>Paraguas planeador</h4>
+                  <p>Planeo corto con lectura visual elegante y control de caída.</p>
+                </article>
+                <article class="em-ability-card">
+                  <h4>Pértiga</h4>
+                  <p>Impulso hacia plataformas lejanas o entradas ocultas.</p>
+                </article>
+                <article class="em-ability-card">
+                  <h4>Escudo rápido</h4>
+                  <p>Reflejo de proyectiles y defensa táctica en combate ligero.</p>
+                </article>
+                <article class="em-ability-card">
+                  <h4>Transformador</h4>
+                  <p>El bastón cambia por reliquias de fuego, hielo o sombra.</p>
+                </article>
+              </div>
+
+              <div class="em-combo-box">
+                <strong>Combo ejemplo</strong>
+                <p>Rebote + Planeo + Liana → acceso a zonas opcionales con reliquias escondidas.</p>
+              </div>
+            </article>
+
+            <article class="em-panel" data-stage="legado">
+              <div class="em-panel-header">
+                <p class="em-panel-kicker">06 · Pilar filosófico</p>
+                <h3>Legado de mármol y oro</h3>
+              </div>
+
+              <div class="em-legacy-grid">
+                <div class="em-legacy-card">
+                  <span>Legado materialista</span>
+                  <p>Más riqueza, más control, más herramientas, pero un costo humano mayor.</p>
+                </div>
+                <div class="em-legacy-card">
+                  <span>Legado humano</span>
+                  <p>Familia, vínculos y memoria compartida por encima del botín.</p>
+                </div>
+                <div class="em-legacy-card">
+                  <span>Legado equilibrado</span>
+                  <p>El oro solo tiene valor si se usa con criterio, enseñanza y responsabilidad.</p>
+                </div>
+              </div>
+
+              <blockquote class="em-quote">
+                “Un legado no es lo que dejas en bóvedas, sino lo que sobrevive cuando el oro ya no importa.”
+              </blockquote>
+            </article>
+
+            <article class="em-panel" data-stage="mercado">
+              <div class="em-panel-header">
+                <p class="em-panel-kicker">07 · Viabilidad</p>
+                <h3>Popularidad, inversión y ruta de pitch</h3>
+              </div>
+
+              <div class="em-market-layout">
+                <div class="em-market-card">
+                  <h4>Valor nostálgico</h4>
+                  <p>La mezcla de exploración, caricatura clásica y plataformas tiene gancho para públicos retro y modernos.</p>
+                </div>
+                <div class="em-market-card">
+                  <h4>Riesgo IP</h4>
+                  <p>La licencia oficial sería compleja; por eso el pitch también contempla una versión original inspirada.</p>
+                </div>
+                <div class="em-market-card">
+                  <h4>Ángulo de venta</h4>
+                  <p>Cartoon 3D elegante, bastón multiusos, rival memorable y progreso por mundos con filosofía clara.</p>
+                </div>
+              </div>
+
+              <div class="em-route-ribbon">
+                <span>Ruta A: Pitch oficial con licencia</span>
+                <span>Ruta B: IP original inspirada en el arquetipo del magnate explorador</span>
+              </div>
+            </article>
+
+            <article class="em-panel" data-stage="assets" id="epicAssets">
+              <div class="em-panel-header">
+                <p class="em-panel-kicker">08 · Producción</p>
+                <h3>Activos para mejorar la maqueta</h3>
+              </div>
+
+              <div class="em-assets-list">
+                <div class="em-asset-item">
+                  <strong>hero-mcduck.png</strong>
+                  <span>Render o ilustración principal del protagonista.</span>
+                </div>
+                <div class="em-asset-item">
+                  <strong>corvin-thornsworth.png</strong>
+                  <span>Render o ilustración del cuervo aristócrata.</span>
+                </div>
+                <div class="em-asset-item">
+                  <strong>walker-sprite.png</strong>
+                  <span>Opcional. Sprite sheet del personaje caminando para reemplazar el caminante CSS.</span>
+                </div>
+                <div class="em-asset-item">
+                  <strong>world-*.png</strong>
+                  <span>Opcional. Postales o key arts de mundos si más adelante quieres sustituir las recreaciones CSS.</span>
+                </div>
+              </div>
+
+              <div class="em-readme-box">
+                <p>
+                  Esta versión ya funciona como MVP visual del proyecto. Las imágenes no son obligatorias:
+                  la página recrea escenarios y ritmo de avance con CSS y JS, y deja claros los puntos
+                  donde puedes enriquecerla con arte original.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" data-site-footer>
+    <div class="container footer-content">
+      <p><strong>© 2026 · JCrow</strong> · Portafolio profesional</p>
+      <p>Game Design técnico · Desarrollo · Investigación</p>
+    </div>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/projects/epic-mcduck.js"></script>
+  <script src="../../assets/js/navigation.js"></script>
+</body>
+</html>

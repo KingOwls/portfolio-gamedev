@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Symphony of Justice | Portafolio</title>
+  <meta
+    name="description"
+    content="Documento interactivo del proyecto Symphony of Justice con navegación horizontal por viñetas tipo vagones."
+  />
+  <link rel="icon" type="image/gif" href="../../assets/img/icons/bird_anim_01.gif" />
+  <link rel="stylesheet" href="../../assets/css/main.css" />
+  <link rel="stylesheet" href="../../assets/css/projects/symphony-of-justice.css" />
+</head>
+<body>
+  <div class="sj-page">
+    <header class="sj-header" data-site-header>
+      <a class="sj-brand" href="../../index.html" aria-label="Volver al portafolio">
+        <span class="sj-brand-mark">JC</span>
+        <span class="sj-brand-copy">
+          <strong>Symphony of Justice</strong>
+          <small>Faith Balance Project · Portafolio conceptual</small>
+        </span>
+      </a>
+
+      <nav class="sj-top-nav" id="navMenu" aria-label="Navegación principal">
+        <a href="../../index.html">Inicio</a>
+        <a href="../about/about.html">Sobre mí</a>
+        <a href="../about/proyectos.html">Proyectos / Áreas</a>
+        <a href="../analista/analista.html">Análisis de juegos</a>
+        <a href="../../assets/pdf/Hoja_de_vida.pdf" target="_blank" rel="noopener noreferrer">Hoja de vida</a>
+      </nav>
+
+      <button class="menu-toggle sj-menu-toggle" id="menuToggle" type="button" aria-label="Abrir menú" aria-controls="navMenu" aria-expanded="false">☰</button>
+    </header>
+
+    <main class="sj-journey" id="sjJourney" aria-live="polite">
+      <aside class="sj-console">
+        <div class="sj-console-head">
+          <p class="sj-kicker">Recorrido</p>
+          <h1>Vagones de investigación</h1>
+          <p class="sj-console-copy">
+            Este proyecto se desplaza hacia la derecha. Cada vagón sintetiza un bloque
+            del diseño: mundo, historia, sistemas, personajes, gacha y roadmap.
+          </p>
+        </div>
+
+        <div class="sj-rail" id="sjRail"></div>
+
+        <div class="sj-console-controls">
+          <button type="button" class="sj-nav-btn" id="sjPrevBtn" aria-label="Vagón anterior">←</button>
+          <button type="button" class="sj-nav-btn" id="sjNextBtn" aria-label="Siguiente vagón">→</button>
+        </div>
+
+        <div class="sj-console-footer">
+          <p class="sj-console-hint">
+            Usa las flechas, la rueda del mouse o los indicadores del costado para cambiar de vagón.
+          </p>
+          <span class="sj-station" id="sjStationLabel">Vagón 01 · Obertura</span>
+        </div>
+      </aside>
+
+      <section class="sj-stage">
+        <div class="sj-track" id="sjTrack">
+          <article class="sj-wagon sj-wagon--hero" data-title="Obertura" data-tone="hero">
+            <div class="sj-wagon-shell">
+              <div class="sj-wagon-intro">
+                <p class="sj-section-kicker">Faith Balance Project</p>
+                <h2>Symphonia Iustitiae</h2>
+                <p class="sj-lead">
+                  Un RPG gacha de mundo abierto que convierte la justicia en un escenario vivo:
+                  juicio, perdón, castigo y sabiduría como fuerzas narrativas, mecánicas y estéticas.
+                </p>
+
+                <div class="sj-hero-meta">
+                  <div class="sj-pill">
+                    <span>Versión</span>
+                    <strong>0.15.6</strong>
+                  </div>
+                  <div class="sj-pill">
+                    <span>Plataformas</span>
+                    <strong>PC · Móvil · Consolas</strong>
+                  </div>
+                  <div class="sj-pill">
+                    <span>Formato</span>
+                    <strong>Capítulos y actos</strong>
+                  </div>
+                </div>
+
+                <p class="sj-hero-copy">
+                  El proyecto imagina una historia contada como una ópera fragmentada:
+                  un protagonista perseguido por visiones, un sistema de clanes en conflicto
+                  y una propuesta de largo aliento para mantenerse de 6 a 8 años con historia,
+                  eventos, endgame y monetización temática.
+                </p>
+
+                <div class="sj-hero-actions">
+                  <button type="button" class="sj-primary-btn" data-go="1">Ver pilares</button>
+                  <button type="button" class="sj-secondary-btn" data-go="4">Ver sistemas</button>
+                </div>
+              </div>
+
+              <div class="sj-hero-visual">
+                <div class="sj-sigil">
+                  <div class="sj-sigil-ring sj-sigil-ring--one"></div>
+                  <div class="sj-sigil-ring sj-sigil-ring--two"></div>
+                  <div class="sj-sigil-cross"></div>
+                  <div class="sj-sigil-core">SI</div>
+                </div>
+
+                <div class="sj-principles">
+                  <div class="sj-principle-card">
+                    <span>I</span>
+                    <strong>Juicio</strong>
+                  </div>
+                  <div class="sj-principle-card">
+                    <span>II</span>
+                    <strong>Perdón</strong>
+                  </div>
+                  <div class="sj-principle-card">
+                    <span>III</span>
+                    <strong>Castigo</strong>
+                  </div>
+                  <div class="sj-principle-card">
+                    <span>IV</span>
+                    <strong>Sabiduría</strong>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="sj-wagon" data-title="Pilares" data-tone="principles">
+            <div class="sj-wagon-shell">
+              <div class="sj-panel sj-panel--dense">
+                <p class="sj-section-kicker">Fundamento narrativo</p>
+                <h2>Los cuatro focos de la justicia</h2>
+                <p>
+                  La base del mundo se apoya en cuatro fuerzas: el juicio, el perdón,
+                  el castigo y la sabiduría. No son solo ideas abstractas: se convierten en
+                  dioses, clanes, armas, tesoros, decisiones políticas y rutas de personaje.
+                </p>
+                <div class="sj-principle-grid" id="sjPrincipleGrid"></div>
+              </div>
+
+              <div class="sj-panel">
+                <p class="sj-section-kicker">Posicionamiento</p>
+                <h3>Público, tono y promesa</h3>
+                <ul class="sj-bullets">
+                  <li>Dirigido a jugadores casuales y RPG de mundo abierto, con espacio para PvE y competitivo.</li>
+                  <li>Historia en capítulos y actos, como un musical oscuro con identidad gótica y fantástica.</li>
+                  <li>Microtransacciones integradas al mundo, pero con apoyo fuerte en lore, exploración y endgame.</li>
+                </ul>
+
+                <div class="sj-audience-meter" id="sjAudienceMeter"></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="sj-wagon" data-title="Naciones" data-tone="clans">
+            <div class="sj-wagon-shell">
+              <div class="sj-panel sj-panel--wide">
+                <p class="sj-section-kicker">Mapa político</p>
+                <h2>Clanes mayores, clanes menores y eje moral</h2>
+                <p>
+                  El mundo principal reúne cuatro clanes mayores y un conjunto de clanes menores
+                  que funcionan como custodios, cronistas, verdugos, mediadores o fuerzas errantes.
+                  Cada nación tiene cultura, arquitectura y una relación distinta con la justicia.
+                </p>
+
+                <div class="sj-clan-grid" id="sjClanGrid"></div>
+              </div>
+
+              <div class="sj-panel">
+                <p class="sj-section-kicker">Equilibrio de poder</p>
+                <h3>Clanes menores clave</h3>
+                <div class="sj-subclan-list" id="sjSubClanList"></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="sj-wagon" data-title="Historia" data-tone="story">
+            <div class="sj-wagon-shell">
+              <div class="sj-panel">
+                <p class="sj-section-kicker">Mito de origen</p>
+                <h2>Una guerra divina que rompe el equilibrio</h2>
+                <p>
+                  Las naciones nacen del colapso entre hermanos divinos. El perdón asesina a la sabiduría y al castigo;
+                  el juicio sobrevive, derrota a su hermana y deja una estructura política, bélica y moral que todavía
+                  define a todas las naciones del presente.
+                </p>
+                <div class="sj-timeline" id="sjMythTimeline"></div>
+              </div>
+
+              <div class="sj-panel sj-panel--story">
+                <p class="sj-section-kicker">Capítulos iniciales</p>
+                <h3>El viaje de Niels</h3>
+                <div class="sj-story-chapters" id="sjStoryChapters"></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="sj-wagon" data-title="Sistemas" data-tone="systems">
+            <div class="sj-wagon-shell">
+              <div class="sj-panel">
+                <p class="sj-section-kicker">Diseño jugable</p>
+                <h2>Batalla, árbol de habilidades y reacciones</h2>
+                <p>
+                  El sistema propone combate por turnos con configuración táctica, profesiones,
+                  rol funcional, elemento, talento único y maestría. La exploración se apoya en
+                  sinergias, recursos, utilidades y profesiones de campo.
+                </p>
+                <div class="sj-systems-grid" id="sjSystemsGrid"></div>
+              </div>
+
+              <div class="sj-panel sj-panel--matrix">
+                <p class="sj-section-kicker">Laboratorio elemental</p>
+                <h3>Reacciones recreadas</h3>
+                <div class="sj-reaction-matrix" id="sjReactionMatrix"></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="sj-wagon" data-title="Personajes" data-tone="characters">
+            <div class="sj-wagon-shell">
+              <div class="sj-panel sj-panel--wide">
+                <p class="sj-section-kicker">Fichas de personaje</p>
+                <h2>Vista previa del elenco principal</h2>
+                <p>
+                  Las ilustraciones no se incluyen aquí. En su lugar, la página deja una estructura
+                  lista para cargar tus PNG: cada ficha muestra nombre, apodo, rol, rareza, tres ramas
+                  de árbol y descripción visual resumida.
+                </p>
+
+                <div class="sj-character-rail" id="sjCharacterRail"></div>
+              </div>
+
+              <div class="sj-panel sj-panel--dossier">
+                <p class="sj-section-kicker">Dossier activo</p>
+                <div class="sj-dossier" id="sjDossier"></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="sj-wagon" data-title="Gacha" data-tone="gacha">
+            <div class="sj-wagon-shell">
+              <div class="sj-panel">
+                <p class="sj-section-kicker">Monetización temática</p>
+                <h2>Banners, pity y capas de ganancia</h2>
+                <p>
+                  El sistema gacha se reparte entre banner promocional de personaje, banner de armas,
+                  banner temático y permanente. Además se articula con suministros de exploración,
+                  decorativos, decoraciones hogareñas, compra de recursos, pase de batalla y Cadenas de Legado.
+                </p>
+
+                <div class="sj-gacha-grid" id="sjGachaGrid"></div>
+              </div>
+
+              <div class="sj-panel sj-panel--chart">
+                <p class="sj-section-kicker">Pity comparado</p>
+                <h3>Visualización recreada</h3>
+                <svg id="sjPityChart" class="sj-pity-chart" viewBox="0 0 640 360" aria-label="Gráfico de pity"></svg>
+              </div>
+            </div>
+          </article>
+
+          <article class="sj-wagon" data-title="Endgame" data-tone="endgame">
+            <div class="sj-wagon-shell">
+              <div class="sj-panel">
+                <p class="sj-section-kicker">Isla sin reino</p>
+                <h2>Endgame cooperativo y red social del mundo</h2>
+                <p>
+                  La isla sin reino funciona como nodo de paz, intercambio y endgame. Allí convergen
+                  la economía globalizada, las dungeons semanales, la cooperación entre jugadores,
+                  la casa del jugador y el mercado de objetos, recetas y materiales.
+                </p>
+                <div class="sj-endgame-grid" id="sjEndgameGrid"></div>
+              </div>
+
+              <div class="sj-panel sj-panel--deep">
+                <p class="sj-section-kicker">Mecánicas semanales</p>
+                <div class="sj-loop-board" id="sjLoopBoard"></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="sj-wagon" data-title="Roadmap" data-tone="roadmap">
+            <div class="sj-wagon-shell">
+              <div class="sj-panel sj-panel--wide">
+                <p class="sj-section-kicker">Trabajo por versiones</p>
+                <h2>Del capítulo inicial a la isla sin reino</h2>
+                <p>
+                  El primer año se imagina como una secuencia de versiones 1.0 a 1.6
+                  con historia principal, eventos temáticos, relleno útil, minijuegos,
+                  evolución del ministerio, desaparición de la hermana y apertura de la isla.
+                </p>
+                <div class="sj-roadmap-track" id="sjRoadmapTrack"></div>
+              </div>
+
+              <div class="sj-panel">
+                <p class="sj-section-kicker">Capas de producción</p>
+                <ul class="sj-bullets">
+                  <li>Diseño visual e ilustración conceptual como apoyo, no como arte final.</li>
+                  <li>Equipo ideal: programación, arte, ambientes, interfaz, sonido, localización y ciberseguridad.</li>
+                  <li>Proyecto pensado como ecosistema multiplataforma con fuerte vida útil y piezas externas como manga.</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <article class="sj-wagon sj-wagon--closing" data-title="Cierre" data-tone="closing">
+            <div class="sj-wagon-shell">
+              <div class="sj-panel sj-panel--closing">
+                <p class="sj-section-kicker">Síntesis final</p>
+                <h2>Un universo diseñado para convertirse en saga</h2>
+                <p>
+                  Esta página prepara el proyecto para el portafolio con navegación horizontal tipo vagones,
+                  gráficos recreados con HTML, CSS y JS, y una capa documental lista para recibir los PNG
+                  de personajes. Lo que queda pendiente ya no es la estructura: es pulir arte, vínculos y detalles.
+                </p>
+
+                <div class="sj-closing-actions">
+                  <a href="../areas/areas.html" class="sj-primary-btn">Volver a proyectos</a>
+                  <button type="button" class="sj-secondary-btn" data-go="0">Regresar al inicio</button>
+                </div>
+
+                <div class="sj-asset-note">
+                  <h3>Activos por completar</h3>
+                  <p>
+                    Revisa el archivo <strong>README_ACTIVOS_Y_ENLACES.md</strong> incluido en el zip.
+                    Ahí se indica qué PNG de personajes debes agregar y en qué carpeta colocarlos.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="sj-footer" data-site-footer>
+      <p>© 2026 · Portafolio conceptual de Jorge Osorio</p>
+      <p>Symphony of Justice · Caso de estudio interactivo</p>
+    </footer>
+  </div>
+  
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/projects/symphony-of-justice.js"></script>
+  <script src="../../assets/js/navigation.js"></script>
+</body>
+</html>

@@ -35,7 +35,6 @@
   let activeIndex = 0;
   let autoRotate = null;
   let isPaused = false;
-  let lastClickTime = 0;
 
   function normalizePath(path) {
     if (!path || typeof path !== "string") return "";
@@ -184,22 +183,14 @@
       });
 
       card.addEventListener("click", () => {
-        const now = Date.now();
-
         if (activeIndex !== index) {
           activeIndex = index;
           renderWheel();
           updateFocus(project);
-          lastClickTime = 0;
           return;
         }
 
-        if (now - lastClickTime < 350) {
-          window.location.href = project.link || "#";
-          return;
-        }
-
-        lastClickTime = now;
+        window.location.href = project.link || "../../index.html";
       });
 
       wheel.appendChild(card);

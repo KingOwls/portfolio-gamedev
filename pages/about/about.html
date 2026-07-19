@@ -8,114 +8,133 @@
   <link rel="icon" type="image/gif" href="../../assets/img/icons/bird_anim_01.gif" />
   <link rel="stylesheet" href="../../assets/css/main.css" />
 </head>
-<body>
-  <header class="site-header">
+<body class="site-layout">
+  <header class="site-header" data-site-header>
     <div class="container nav-container">
-      <a href="../../index.html" class="logo">JCrow</a>
+      <a href="../../index.html" class="logo" aria-label="JCrow, volver al inicio">JCrow</a>
 
-      <nav class="nav-menu" id="navMenu">
+      <nav class="nav-menu" id="navMenu" aria-label="Navegación principal">
         <a href="../../index.html">Inicio</a>
-        <a href="./about.html">Sobre mí</a>
-        <a href="../areas/areas.html">Proyectos / Áreas</a>
+        <a href="./about.html" aria-current="page">Sobre mí</a>
+        <a href="./proyectos.html">Proyectos / Áreas</a>
         <a href="../analista/analista.html">Análisis de juegos</a>
-        <a href="../../assets/pdf/Hoja_de_vida.pdf" target="_blank">Hoja de vida</a>
+        <a href="../../assets/pdf/Hoja_de_vida.pdf" target="_blank" rel="noopener noreferrer">Hoja de vida</a>
       </nav>
 
-      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">☰</button>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Abrir menú" aria-controls="navMenu" aria-expanded="false">☰</button>
     </div>
   </header>
 
   <main class="about-page">
-<section class="about-interface">
-  <div class="about-scene" id="aboutScene">
-    <div class="about-scene-bg" id="aboutDisplayBg"></div>
-    <div class="about-scene-noise"></div>
-    <div class="about-scene-grid"></div>
-    <div class="about-scene-glow"></div>
+    <section class="about-interface">
+      <div class="about-scene" id="aboutScene">
+        <div class="about-scene-bg" id="aboutDisplayBg"></div>
+        <div class="about-scene-noise"></div>
+        <div class="about-scene-grid"></div>
+        <div class="about-scene-glow"></div>
 
-    <div class="container about-scene-inner">
-      <aside class="about-orbit-panel">
-        <p class="section-tag">Navegación</p>
-        <h2>Rueda de bloques</h2>
-        <p class="about-wheel-description">
-          Seis dimensiones del perfil profesional organizadas como una media luna interactiva.
-          Usa la rueda o las flechas para cambiar de bloque.
-        </p>
+        <div class="container about-scene-inner">
+          <aside class="about-orbit-panel">
+            <p class="section-tag">Navegación</p>
+            <h2>Rueda de bloques</h2>
+            <p class="about-wheel-description">
+              Seis dimensiones del perfil profesional organizadas como una media luna interactiva.
+              Usa la rueda o las flechas para cambiar de bloque.
+            </p>
 
-        <div class="about-arc" id="aboutWheel">
-          <div class="about-arc-ring" id="aboutWheelRing"></div>
+            <div class="about-arc" id="aboutWheel">
+              <div class="about-arc-ring" id="aboutWheelRing"></div>
 
-          <div class="about-arc-core">
-            <span class="about-arc-core-tag">JCrow</span>
-            <strong>About Me</strong>
-            <small>6 bloques</small>
-          </div>
+              <div class="about-arc-core">
+                <span class="about-arc-core-tag">JCrow</span>
+                <strong>About Me</strong>
+                <small>6 bloques</small>
+              </div>
+            </div>
+
+            <div class="about-wheel-controls">
+              <button id="aboutPrevBtn" class="about-wheel-control" type="button" aria-label="Bloque anterior">←</button>
+              <button id="aboutNextBtn" class="about-wheel-control" type="button" aria-label="Siguiente bloque">→</button>
+            </div>
+
+            <p class="about-wheel-hint">
+              Cada bloque cambia el fondo, la figura principal, el acompañante visual y la composición.
+            </p>
+          </aside>
+
+          <article class="about-display" id="aboutDisplay">
+            <div class="about-display-copy">
+              <div class="about-panel about-panel-title">
+                <p class="about-display-kicker" id="aboutDisplayKicker">Jorge Osorio / JCrow</p>
+                <h2 id="aboutDisplayTitle">Cargando perfil...</h2>
+              </div>
+
+              <div class="about-panel about-panel-badge">
+                <div class="about-display-badge" id="aboutDisplayBadge">Bloque 01 · Presentación</div>
+
+                <div class="about-badge-companion">
+                  <span class="about-panel-mini-label">Acompañante</span>
+                  <div class="about-companion-lane about-companion-lane--compact">
+                    <img
+                      id="aboutDisplayCompanion"
+                      class="about-display-companion"
+                      src=""
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="about-panel about-panel-text">
+                <p class="about-display-intro" id="aboutDisplayIntro"></p>
+                <p class="about-display-body" id="aboutDisplayBody"></p>
+              </div>
+
+              <div class="about-panel about-panel-image">
+                <span class="about-panel-mini-label">Imagen principal</span>
+
+                <div class="about-image-frame">
+                  <img
+                    id="aboutDisplayFigure"
+                    class="about-display-figure"
+                    src=""
+                    alt=""
+                  />
+                </div>
+              </div>
+
+              <div class="about-panel about-panel-highlights">
+                <ul class="about-display-highlights" id="aboutDisplayHighlights"></ul>
+              </div>
+
+              <div class="about-panel about-panel-meta">
+                <span class="about-panel-mini-label">Tags</span>
+                <div class="about-display-tags" id="aboutDisplayTags"></div>
+              </div>
+
+              <div class="about-panel about-panel-actions">
+                <div class="about-display-actions">
+                  <a href="../juegos/symphony-of-justice.html" class="btn btn-primary">Ver proyecto</a>
+                  <a href="../analista/analista.html" class="btn btn-secondary">Ver análisis</a>
+                  <a href="../../assets/pdf/Hoja_de_vida.pdf" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Hoja de vida</a>
+                </div>
+              </div>
+            </div>
+          </article>
         </div>
-
-        <div class="about-wheel-controls">
-          <button id="aboutPrevBtn" class="about-wheel-control" type="button" aria-label="Bloque anterior">←</button>
-          <button id="aboutNextBtn" class="about-wheel-control" type="button" aria-label="Siguiente bloque">→</button>
-        </div>
-
-        <p class="about-wheel-hint">
-          Cada bloque cambia el fondo, la figura principal, el acompañante visual y la composición.
-        </p>
-      </aside>
-
-      <article class="about-display" id="aboutDisplay">
-        <div class="about-display-panel">
-          <div class="about-display-badge" id="aboutDisplayBadge">Bloque 01 · Presentación</div>
-
-          <p class="about-display-kicker" id="aboutDisplayKicker">Jorge Osorio / JCrow</p>
-          <h2 id="aboutDisplayTitle">Cargando perfil...</h2>
-
-          <p class="about-display-intro" id="aboutDisplayIntro"></p>
-          <p class="about-display-body" id="aboutDisplayBody"></p>
-
-          <ul class="about-display-highlights" id="aboutDisplayHighlights"></ul>
-
-          <div class="about-display-tags" id="aboutDisplayTags"></div>
-
-          <div class="about-display-actions">
-            <a href="../proyectos/proyectos.html" class="btn btn-primary">Ver proyectos</a>
-            <a href="../analista/analista.html" class="btn btn-secondary">Ver análisis</a>
-            <a href="../../assets/pdf/Hoja_de_vida.pdf" target="_blank" class="btn btn-secondary">Hoja de vida</a>
-          </div>
-        </div>
-
-        <div class="about-display-visual">
-          <img
-            id="aboutDisplayFigure"
-            class="about-display-figure"
-            src=""
-            alt=""
-          />
-
-          <img
-            id="aboutDisplayCompanion"
-            class="about-display-companion"
-            src=""
-            alt=""
-          />
-
-          <div class="about-display-sprite-track" id="aboutDisplaySpriteTrack">
-            <div id="aboutDisplaySprite" class="about-display-sprite about-hidden"></div>
-          </div>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
+      </div>
+    </section>
   </main>
 
-  <footer class="site-footer">
+  <footer class="site-footer" data-site-footer>
     <div class="container footer-content">
-      <p>© 2026 - Portafolio profesional</p>
-      <p>Diseño, desarrollo y análisis de videojuegos</p>
+      <p><strong>© 2026 · JCrow</strong> · Portafolio profesional</p>
+      <p>Game Design técnico · Desarrollo · Investigación</p>
     </div>
   </footer>
 
   <script src="../../assets/js/main.js"></script>
   <script src="../../assets/js/about.js"></script>
+  <script src="../../assets/js/navigation.js"></script>
 </body>
 </html>

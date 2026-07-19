@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exorcista del Último Juicio | Portafolio</title>
+  <meta name="description" content="Proyecto RPG narrativo con progresión por ramas morales, capítulos, personajes y combate por turnos." />
+  <link rel="icon" type="image/gif" href="../../assets/img/icons/bird_anim_01.gif" />
+  <link rel="stylesheet" href="../../assets/css/main.css" />
+  <link rel="stylesheet" href="../../assets/css/projects/exorcista-del-ultimo-juicio.css" />
+</head>
+<body class="site-layout">
+  <header class="site-header" data-site-header>
+    <div class="container nav-container">
+      <a href="../../index.html" class="logo" aria-label="JCrow, volver al inicio">JCrow</a>
+
+      <nav class="nav-menu" id="navMenu" aria-label="Navegación principal">
+        <a href="../../index.html">Inicio</a>
+        <a href="../about/about.html">Sobre mí</a>
+        <a href="../about/proyectos.html" aria-current="page">Proyectos / Áreas</a>
+        <a href="../analista/analista.html">Análisis de juegos</a>
+        <a href="../../assets/pdf/Hoja_de_vida.pdf" target="_blank" rel="noopener noreferrer">Hoja de vida</a>
+      </nav>
+
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Abrir menú" aria-controls="navMenu" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <main class="eju-page">
+    <section class="eju-hero container">
+      <div class="eju-hero-copy">
+        <p class="section-tag">Proyecto narrativo</p>
+        <h1>Exorcista del Último Juicio</h1>
+        <p class="eju-lead">
+          Un RPG de pasillos, condena y decisión. La historia de Ellis Baneblood se
+          desplaza por un corredor de capítulos donde cada paso deforma su humanidad,
+          su moral y el final que merece.
+        </p>
+        <div class="eju-hero-actions">
+          <button class="btn btn-primary" type="button" data-jump="0">Entrar al corredor</button>
+          <button class="btn btn-secondary" type="button" data-jump="2">Ver ramas</button>
+          <button class="btn btn-secondary" type="button" data-jump="4">Ver capítulos</button>
+        </div>
+      </div>
+
+      <aside class="eju-side-card">
+        <h2>Pilares del proyecto</h2>
+        <ul>
+          <li>RPG con progresión narrativa y capítulos</li>
+          <li>Ramas evolutivas: Humanidad, Moralidad, Justicia, Santificación y Avaricia</li>
+          <li>Combate por turnos, técnicas, voluntad y finales múltiples</li>
+          <li>Un protagonista cuyo estado interno decide el desenlace</li>
+        </ul>
+      </aside>
+    </section>
+
+    <section class="eju-experience" id="ejuExperience">
+      <aside class="eju-index" aria-label="Índice del proyecto">
+        <p class="eju-index-kicker">Corredor</p>
+        <nav class="eju-index-nav" id="ejuIndexNav"></nav>
+        <div class="eju-index-help">
+          <p>Usa la rueda del mouse, las flechas o los botones para avanzar.</p>
+        </div>
+      </aside>
+
+      <div class="eju-stage">
+        <div class="eju-corridor">
+          <div class="eju-corridor-glow"></div>
+          <div class="eju-corridor-grid"></div>
+          <div class="eju-corridor-floor"></div>
+          <div class="eju-corridor-slices" id="ejuCorridorSlices"></div>
+          <div class="eju-runner" id="ejuRunner" aria-hidden="true">
+            <div class="eju-runner-head"></div>
+            <div class="eju-runner-body"></div>
+            <div class="eju-runner-legs"></div>
+          </div>
+        </div>
+
+        <article class="eju-panel" id="ejuPanel" aria-live="polite">
+          <div class="eju-panel-header">
+            <div>
+              <p class="eju-panel-kicker" id="ejuPanelKicker">Tramo 01</p>
+              <h2 id="ejuPanelTitle">Cargando proyecto…</h2>
+            </div>
+            <div class="eju-panel-badge" id="ejuPanelBadge">Inicio</div>
+          </div>
+
+          <p class="eju-panel-intro" id="ejuPanelIntro"></p>
+
+          <div class="eju-panel-grid">
+            <section class="eju-card eju-card--story">
+              <h3>Resumen</h3>
+              <p id="ejuPanelBody"></p>
+            </section>
+
+            <section class="eju-card eju-card--visual">
+              <h3 id="ejuVisualTitle">Visual</h3>
+              <div class="eju-visual-frame" id="ejuVisualFrame"></div>
+            </section>
+
+            <section class="eju-card eju-card--highlights">
+              <h3>Claves</h3>
+              <ul id="ejuHighlights"></ul>
+            </section>
+
+            <section class="eju-card eju-card--meta">
+              <h3>Etiquetas</h3>
+              <div class="eju-tags" id="ejuTags"></div>
+            </section>
+          </div>
+
+          <div class="eju-panel-actions">
+            <button class="eju-control" type="button" id="ejuPrevBtn">← Tramo anterior</button>
+            <button class="eju-control" type="button" id="ejuNextBtn">Siguiente tramo →</button>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" data-site-footer>
+    <div class="container footer-content">
+      <p><strong>© 2026 · JCrow</strong> · Portafolio profesional</p>
+      <p>Game Design técnico · Desarrollo · Investigación</p>
+    </div>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/projects/exorcista-del-ultimo-juicio.js"></script>
+  <script src="../../assets/js/navigation.js"></script>
+</body>
+</html>

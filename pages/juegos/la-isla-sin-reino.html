@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>La isla sin reino | Portafolio</title>
+  <meta
+    name="description"
+    content="Página de proyecto para el MMO La isla sin reino: visión, arquitectura, mundo, combate, economía, MVP y roadmap interactivos."
+  />
+  <link rel="icon" type="image/gif" href="../../assets/img/icons/bird_anim_01.gif" />
+  <link rel="stylesheet" href="../../assets/css/main.css" />
+  <link rel="stylesheet" href="../../assets/css/projects/la-isla-sin-reino.css" />
+</head>
+<body class="mmo-project-body site-layout">
+  <header class="site-header" data-site-header>
+    <div class="container nav-container">
+      <a href="../../index.html" class="logo" aria-label="JCrow, volver al inicio">JCrow</a>
+
+      <nav class="nav-menu" id="navMenu" aria-label="Navegación principal">
+        <a href="../../index.html">Inicio</a>
+        <a href="../about/about.html">Sobre mí</a>
+        <a href="../about/proyectos.html" aria-current="page">Proyectos / Áreas</a>
+        <a href="../analista/analista.html">Análisis de juegos</a>
+        <a href="../../assets/pdf/Hoja_de_vida.pdf" target="_blank" rel="noopener noreferrer">Hoja de vida</a>
+      </nav>
+
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Abrir menú" aria-controls="navMenu" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <main class="mmo-book-page">
+    <aside class="mmo-index-panel">
+      <div class="mmo-index-card">
+        <p class="section-tag">Proyecto</p>
+        <h1>La isla sin reino</h1>
+        <p class="mmo-index-text">
+          MMORPG insular por salas, con arquitectura híbrida de microservicios,
+          autoridad de servidor, combate táctico 4 vs 4 y enfoque fuerte en comunidad.
+        </p>
+
+        <div class="mmo-index-actions">
+          <a id="linkBackPortfolio" class="btn btn-primary" href="../about/proyectos.html">Volver al portafolio</a>
+          <a id="linkProjectDoc" class="btn btn-secondary" href="../diseno/islasinreino.html">Documento base</a>
+        </div>
+      </div>
+
+      <nav class="mmo-index-nav" id="moduleNav" aria-label="Índice del proyecto">
+        <button type="button" class="mmo-index-item is-active" data-target="hero">01. Visión</button>
+        <button type="button" class="mmo-index-item" data-target="mundo">02. Mundo</button>
+        <button type="button" class="mmo-index-item" data-target="arquitectura">03. Arquitectura</button>
+        <button type="button" class="mmo-index-item" data-target="personajes">04. Personajes</button>
+        <button type="button" class="mmo-index-item" data-target="interfaces">05. Interfaces</button>
+        <button type="button" class="mmo-index-item" data-target="batalla">06. Batalla</button>
+        <button type="button" class="mmo-index-item" data-target="habilidades">07. Habilidades</button>
+        <button type="button" class="mmo-index-item" data-target="dungeons">08. Dungeons</button>
+        <button type="button" class="mmo-index-item" data-target="mascotas">09. Mascotas</button>
+        <button type="button" class="mmo-index-item" data-target="economia">10. Economía</button>
+        <button type="button" class="mmo-index-item" data-target="sostenibilidad">11. Sostenibilidad</button>
+        <button type="button" class="mmo-index-item" data-target="roadmap">12. Roadmap</button>
+        <button type="button" class="mmo-index-item" data-target="mvp">13. MVP</button>
+        <button type="button" class="mmo-index-item" data-target="recursos">14. Recursos</button>
+      </nav>
+
+      <div class="mmo-index-footer">
+        <p><strong>Controles:</strong> rueda, flechas, botones o puntos.</p>
+        <div class="mmo-page-controls">
+          <button type="button" class="mmo-page-btn" id="prevModuleBtn" aria-label="Módulo anterior">←</button>
+          <button type="button" class="mmo-page-btn" id="nextModuleBtn" aria-label="Siguiente módulo">→</button>
+        </div>
+      </div>
+    </aside>
+
+    <section class="mmo-book-shell">
+      <div class="mmo-book-topbar">
+        <div class="mmo-topbar-badge">
+          <span id="moduleCounter">01</span>
+          <span id="moduleLabel">Visión</span>
+        </div>
+
+        <div class="mmo-dot-track" id="moduleDots" aria-label="Progreso del proyecto"></div>
+      </div>
+
+      <div class="mmo-book-viewer" id="bookViewer">
+        <article class="module-page is-active" id="hero" data-title="Visión">
+          <div class="module-grid module-grid--hero">
+            <div class="module-copy">
+              <p class="module-kicker">MMORPG INSULAR · DISEÑO CONCEPTUAL</p>
+              <h2>Un MMO por salas que prioriza comunidad, progresión flexible y eventos con peso real.</h2>
+              <p>
+                La isla sin reino se plantea como un MMORPG insular basado en salas,
+                con arquitectura híbrida de microservicios y autoridad de servidor.
+                El foco está en combinar interacción social, economía virtual regulada,
+                dungeons cooperativas y un combate táctico 4 vs 4 dentro de un ecosistema persistente.
+              </p>
+
+              <div class="metric-row">
+                <div class="metric-card">
+                  <strong>6</strong>
+                  <span>microservicios principales</span>
+                </div>
+                <div class="metric-card">
+                  <strong>4 vs 4</strong>
+                  <span>combate táctico</span>
+                </div>
+                <div class="metric-card">
+                  <strong>13</strong>
+                  <span>naciones y legado del mundo</span>
+                </div>
+                <div class="metric-card">
+                  <strong>F2P</strong>
+                  <span>sin pay-to-win</span>
+                </div>
+              </div>
+
+              <div class="module-actions">
+                <a id="linkPrototype" href="../desarrollo/index.html" class="btn btn-primary">Ver prototipo / repositorio</a>
+                <a id="linkAnalysis" href="../analista/analista.html" class="btn btn-secondary">Análisis relacionado</a>
+              </div>
+            </div>
+
+            <div class="module-visual">
+              <div class="hero-scene" aria-label="Demostración gráfica recreada del viaje inicial">
+                <div class="hero-sky"></div>
+                <div class="hero-moon"></div>
+                <div class="hero-ocean"></div>
+                <div class="hero-island"></div>
+                <div class="hero-train-track"></div>
+                <div class="hero-train">
+                  <span class="train-engine"></span>
+                  <span class="train-wagon"></span>
+                  <span class="train-wagon"></span>
+                </div>
+              </div>
+              <p class="graphic-note">
+                Demostración visual recreada con CSS y JS. No utiliza ilustraciones externas ni material con derechos de autor.
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <article class="module-page" id="mundo" data-title="Mundo">
+          <div class="module-copy module-copy--wide">
+            <p class="module-kicker">MUNDO · ZONAS · LEGADO</p>
+            <h2>La isla se organiza como una memoria viva: costas, ruinas, volcán, bosques, catacumbas y reino abisal.</h2>
+            <p>
+              La entrada al juego se construye sobre un tren acuático que conduce a las Costas de Fools.
+              Desde allí, el mundo se abre en regiones con identidad propia: Forsaken, Abyssal Realm,
+              Vulcanio Mori, Virelia y Umbrael. Cada una funciona como escenario, mecánica y símbolo narrativo.
+            </p>
+          </div>
+
+          <div class="module-split">
+            <div class="panel">
+              <div id="zoneCards" class="zone-card-grid"></div>
+            </div>
+            <div class="panel panel--map">
+              <div class="world-map" id="worldMap"></div>
+              <p class="graphic-note">
+                El mapa utiliza formas SVG y capas de color para recrear el mundo sin depender de concept art externo.
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <article class="module-page" id="arquitectura" data-title="Arquitectura">
+          <div class="module-copy module-copy--wide">
+            <p class="module-kicker">ARQUITECTURA · SERVIDOR · MICROservicios</p>
+            <h2>La infraestructura se plantea con autoridad de servidor y servicios desacoplados para aislar fallos.</h2>
+            <p>
+              El proyecto propone un modelo distribuido donde los estados críticos del juego son validados por servidor:
+              combate, inventario, economía y salas. Cada microservicio opera de forma independiente para evitar
+              que una caída puntual comprometa el resto del sistema.
+            </p>
+          </div>
+
+          <div class="module-split">
+            <div class="panel">
+              <div id="serviceDiagram" class="diagram-shell"></div>
+            </div>
+            <div class="panel">
+              <div class="mini-section">
+                <h3>Movimiento y entrada</h3>
+                <div class="choice-stack" id="movementChoices"></div>
+              </div>
+              <div class="mini-section">
+                <h3>Resumen técnico</h3>
+                <ul class="info-list">
+                  <li>Frontend jugable en Unity con vista 2.5D isométrica.</li>
+                  <li>Persistencia híbrida entre SQL y NoSQL según criticidad del dato.</li>
+                  <li>Pruebas locales, unitarias y despliegue inicial en Docker.</li>
+                  <li>Conectividad planteada con Heroic Labs / Nakama.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="module-page" id="personajes" data-title="Personajes">
+          <div class="module-copy module-copy--wide">
+            <p class="module-kicker">PERSONAJES · ÁRBOLES · FICHA</p>
+            <h2>El usuario tiene un personaje principal editable y acompañantes. La identidad jugable nace de tres árboles.</h2>
+            <p>
+              Cada personaje se define por un Árbol Profesional, un Árbol Nacional y un Árbol Rol.
+              Sobre esa base se organizan 8 habilidades activas, 4 pasivas, 6 de exploración y 2 estadísticas complementarias.
+            </p>
+          </div>
+
+          <div class="module-split module-split--character">
+            <div class="panel">
+              <div class="character-list" id="characterList"></div>
+            </div>
+            <div class="panel">
+              <div class="character-dossier" id="characterDossier"></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="module-page" id="interfaces" data-title="Interfaces">
+          <div class="module-copy module-copy--wide">
+            <p class="module-kicker">INTERFACES · USUARIO · PERSONAJE</p>
+            <h2>La UI se divide en dos familias: interfaz del usuario e interfaz del personaje.</h2>
+            <p>
+              El jugador necesita mapa, chat, logros, tablones, hogar, gremio y noticias.
+              El personaje necesita su propia vista de estadísticas, arma, artefactos, afinidad y equipo.
+            </p>
+          </div>
+
+          <div class="module-split">
+            <div class="panel">
+              <div class="interface-tabs" id="interfaceTabs"></div>
+            </div>
+            <div class="panel">
+              <div class="ui-preview" id="interfacePreview"></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="module-page" id="batalla" data-title="Batalla">
+          <div class="module-copy module-copy--wide">
+            <p class="module-kicker">COMBATE · PRIORIDAD · 4 VS 4</p>
+            <h2>El combate gira en torno a velocidad, decisiones tácticas y lectura del estado del campo.</h2>
+            <p>
+              Cada combatiente puede Atacar, Defender, Usar equipable, lanzar Habilidad, usar Items o Huir.
+              La cola de prioridad permite actualizar el orden según buffs, debuffs, canalización y prioridad.
+            </p>
+          </div>
+
+          <div class="module-split">
+            <div class="panel">
+              <div class="battle-arena" id="battleArena"></div>
+            </div>
+            <div class="panel">
+              <div class="battle-sidebar" id="battleSidebar"></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="module-page" id="habilidades" data-title="Habilidades">
+          <div class="module-copy module-copy--wide">
+            <p class="module-kicker">ARQUETIPOS · PALABRAS CLAVE</p>
+            <h2>El sistema de habilidades se sostiene sobre arquetipos y una librería amplia de palabras clave.</h2>
+            <p>
+              En lugar de describir cada habilidad de forma aislada, el sistema usa palabras clave reutilizables:
+              atacar, curar, escudar, provocar, silenciar, drenar, interrumpir, detonar, acumular y muchas más.
+            </p>
+          </div>
+
+          <div class="module-split">
+            <div class="panel">
+              <div class="keyword-filter-bar" id="keywordFilterBar"></div>
+              <div class="keyword-grid" id="keywordGrid"></div>
+            </div>
+            <div class="panel">
+              <div class="ability-builder" id="abilityBuilder"></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="module-page" id="dungeons" data-title="Dungeons">
+          <div class="module-copy module-copy--wide">
+            <p class="module-kicker">DUNGEONS · CORE LOOP · COOPERATIVO</p>
+            <h2>La mecánica central del juego son las dungeons semanales: jefes, exploración y torre infinita.</h2>
+            <p>
+              La progresión no se basa en subir de nivel para obtener todo automáticamente, sino en superar misiones,
+              rutas, jefes y objetivos condicionales que empujan al jugador a repetir, aprender y optimizar.
+            </p>
+          </div>
+
+          <div class="module-split">
+            <div class="panel">
+              <div class="dungeon-mode-grid" id="dungeonModes"></div>
+            </div>
+            <div class="panel">
+              <div class="loop-diagram" id="dungeonLoop"></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="module-page" id="mascotas" data-title="Mascotas">
+          <div class="module-copy module-copy--wide">
+            <p class="module-kicker">MASCOTAS · EXPLORACIÓN · UTILIDAD</p>
+            <h2>Las mascotas no son meta de combate: son herramientas de exploración y apoyo situacional.</h2>
+            <p>
+              Sus arquetipos —normal, volador, espectro, líquido, planta, rocoso, eléctrico— se diseñan
+              para abrir rutas, detectar trampas, energizar mecanismos o intervenir con el entorno.
+            </p>
+          </div>
+
+          <div class="module-split">
+            <div class="panel">
+              <div class="pet-grid" id="petGrid"></div>
+            </div>
+            <div class="panel">
+              <div class="pet-utility-board" id="petUtilityBoard"></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="module-page" id="economia" data-title="Economía">
+          <div class="module-copy module-copy--wide">
+            <p class="module-kicker">ECONOMÍA · TRADEO · PROFESIONES</p>
+            <h2>La economía busca evitar inflación crónica y conectar profesiones, mercado, subastas y tradeo.</h2>
+            <p>
+              El modelo incorpora impuestos, sinks, límites de producción, subastas, tablones y profesiones
+              interdependientes para que el intercambio tenga peso social y funcional.
+            </p>
+          </div>
+
+          <div class="module-split">
+            <div class="panel">
+              <div class="economy-flow" id="economyFlow"></div>
+            </div>
+            <div class="panel">
+              <div class="profession-grid" id="professionGrid"></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="module-page" id="sostenibilidad" data-title="Sostenibilidad">
+          <div class="module-copy module-copy--wide">
+            <p class="module-kicker">MONETIZACIÓN · SEGURIDAD · COMUNIDAD</p>
+            <h2>La sostenibilidad combina F2P sin pay-to-win, seguridad de servidor y reglas claras para la comunidad.</h2>
+            <p>
+              El proyecto se apoya en monetización estética, moderación, validación de transacciones,
+              protección contra exploits y medidas centradas en comunidad y consumidor.
+            </p>
+          </div>
+
+          <div class="module-split">
+            <div class="panel">
+              <div class="policy-cards" id="policyCards"></div>
+            </div>
+            <div class="panel">
+              <div class="compliance-board" id="complianceBoard"></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="module-page" id="roadmap" data-title="Roadmap">
+          <div class="module-copy module-copy--wide">
+            <p class="module-kicker">VERSIONES · EVENTOS · PROYECCIÓN</p>
+            <h2>El primer año se plantea como un crecimiento por versiones, no como obligación diaria.</h2>
+            <p>
+              El roadmap introduce salas, combate, mascotas, casino, historia, torre posgame y expansión de lore
+              mediante actualizaciones que buscan constancia sin castigar al jugador.
+            </p>
+          </div>
+
+          <div class="panel panel--full">
+            <div class="roadmap-track" id="roadmapTrack"></div>
+          </div>
+        </article>
+
+        <article class="module-page" id="mvp" data-title="MVP">
+          <div class="module-copy module-copy--wide">
+            <p class="module-kicker">MVP · ALCANCE · VALIDACIÓN</p>
+            <h2>El producto mínimo viable busca probar persistencia, interacción social, dungeons y economía básica.</h2>
+            <p>
+              El núcleo del MVP son cuatro salas: hogar del usuario, plaza, gremio y acceso introductorio a dungeons.
+              Sobre ellas se validan chat, tradeo, subastas, formación de equipos e interfaces principales.
+            </p>
+          </div>
+
+          <div class="module-split">
+            <div class="panel">
+              <div class="mvp-room-grid" id="mvpRooms"></div>
+            </div>
+            <div class="panel">
+              <div class="mvp-checklist" id="mvpChecklist"></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="module-page" id="recursos" data-title="Recursos">
+          <div class="module-copy module-copy--wide">
+            <p class="module-kicker">RECURSOS · ENLACES · ACTIVOS</p>
+            <h2>Checklist para terminar de integrarlo al portafolio sin romper la coherencia visual ni legal.</h2>
+            <p>
+              Esta última viñeta concentra enlaces que debes completar, activos opcionales para reforzar la presentación
+              y recordatorios técnicos para integrarlo sin depender de imágenes con derechos de autor.
+            </p>
+          </div>
+
+          <div class="module-split">
+            <div class="panel">
+              <div class="resource-list" id="resourceLinks"></div>
+            </div>
+            <div class="panel">
+              <div class="resource-list" id="resourceAssets"></div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" data-site-footer>
+    <div class="container footer-content">
+      <p><strong>© 2026 · JCrow</strong> · Portafolio profesional</p>
+      <p>Game Design técnico · Desarrollo · Investigación</p>
+    </div>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/projects/la-isla-sin-reino.js"></script>
+  <script src="../../assets/js/navigation.js"></script>
+</body>
+</html>
